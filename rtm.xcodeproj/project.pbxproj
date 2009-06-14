@@ -15,6 +15,7 @@
 		282CCBFE0DB6C98000C4EA27 /* TasksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* TasksView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		CA0D8BCF0FE4EB1F0051C5DE /* AuthParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0D8BCE0FE4EB1F0051C5DE /* AuthParser.m */; };
 		CA2E0D650FDBF82900A71A15 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2E0D640FDBF82900A71A15 /* MenuView.xib */; };
 		CA2E0D880FDBFBB700A71A15 /* ListsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2E0D870FDBFBB700A71A15 /* ListsView.xib */; };
 		CA6150C70FDF7BFA00D5AFDD /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6150C60FDF7BFA00D5AFDD /* ListViewController.m */; };
@@ -36,6 +37,8 @@
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0D8BCD0FE4EB1F0051C5DE /* AuthParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthParser.h; sourceTree = "<group>"; };
+		CA0D8BCE0FE4EB1F0051C5DE /* AuthParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthParser.m; sourceTree = "<group>"; };
 		CA2E0D640FDBF82900A71A15 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		CA2E0D870FDBFBB700A71A15 /* ListsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListsView.xib; sourceTree = "<group>"; };
 		CA6150C50FDF7BF900D5AFDD /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA0D8B520FE4DE640051C5DE /* XMLParser */,
 				28216C950DB411BC00E5133A /* FirstViewController.h */,
 				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				1D3623240D0F684500981E51 /* rtmAppDelegate.h */,
@@ -123,6 +127,15 @@
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA0D8B520FE4DE640051C5DE /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				CA0D8BCD0FE4EB1F0051C5DE /* AuthParser.h */,
+				CA0D8BCE0FE4EB1F0051C5DE /* AuthParser.m */,
+			);
+			name = XMLParser;
 			sourceTree = "<group>";
 		};
 		CA70D77D0FE2B8A000ABF9CB /* WebView */ = {
@@ -196,6 +209,7 @@
 				28216C970DB411BC00E5133A /* FirstViewController.m in Sources */,
 				CA6150C70FDF7BFA00D5AFDD /* ListViewController.m in Sources */,
 				CA70D73A0FE2B44C00ABF9CB /* WebViewController.m in Sources */,
+				CA0D8BCF0FE4EB1F0051C5DE /* AuthParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

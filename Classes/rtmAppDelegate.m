@@ -9,6 +9,7 @@
 #import "rtmAppDelegate.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "WebViewController.h"
+#import "AuthParser.h"
 
 @implementation rtmAppDelegate
 
@@ -27,17 +28,6 @@ static NSString *token = @"";
 		sprintf(md5cstring+i*2, "%02x", md5_result[i]);
 	}
 	return [NSString stringWithCString:md5cstring length:CC_MD5_DIGEST_LENGTH*2];
-}
-
-- (NSXMLElement *) performQuery:(NSString *)query
-{
-	BOOL asHTML = NO;
-	NSURL *url = [NSURL URLWithString:query];
-	NSError *error = nil;
-	int options = (asHTML) ? NSXMLDocumentTidyHTML : 0;
-	NSXMLDocument *document = [[[NSXMLDocument alloc]
-								initWithContentsOfURL:url options:options error:&error] autorelease];
-	return [document rootElement];
 }
 
 - (NSString *) createRtmQuery:(NSDictionary *)params
@@ -73,10 +63,15 @@ static NSString *token = @"";
 	[params setObject:@"rtm.auth.getFrob" forKey:@"method"];
 	NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
 							stringByAppendingString:[self createRtmQuery:params]];
-	NSXMLElement *rootElement = [self performQuery:requestURL];
-	NSArray *linkNodes = [rootElement nodesForXPath:@"//frob" error:nil];
-	NSString *frob = [[linkNodes objectAtIndex:0] stringValue];
+	NSXMLParser *parser = [[NSXMLParser alloc]
+						   initWithContentsOfURL:[NSURL URLWithString:requestURL]];
+	AuthParser *frobParser = [[AuthParser alloc] init];
+	[frobParser setTargetTagName:@"frob"];
+	[parser setDelegate:frobParser];
+	[parser parse];
+	NSString *frob = [frobParser result];
 	NSLog(@"frob is %@", frob);
+	
 	return frob;
 }
 
@@ -106,46 +101,46 @@ static NSString *token = @"";
 	[params setObject:frob forKey:@"frob"];
 	NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
 				  stringByAppendingString:[self createRtmQuery:params]];
-	NSXMLElement *rootElement = [self performQuery:requestURL];
-	NSArray *linkNodes = [rootElement nodesForXPath:@"//token" error:nil];
-	if([linkNodes count] == 1) {
-		NSLog(@"Authorization successed");
-		NSString *token = [[linkNodes objectAtIndex:0] stringValue];
+	NSXMLParser *parser = [[NSXMLParser alloc]
+						   initWithContentsOfURL:[NSURL URLWithString:requestURL]];
+	AuthParser *tokenParser = [[AuthParser alloc] init];
+	[tokenParser setTargetTagName:@"token"];
+	[parser setDelegate:tokenParser];
+	[parser parse];
+	token = [tokenParser result];
+	
+	if ([token isEqualToString:@""])
+	{
+		NSLog(@"Authorization failed");
+		return NO;
+	} else {
 		NSLog(@"token is %@", token);
 		
 		//Save token
-		if (token)
-		{
-			NSLog(@"Saving your token: %@", token);
-			[[NSUserDefaults standardUserDefaults] setObject:token forKey:@"myToken"];
-			[[NSUserDefaults standardUserDefaults] synchronize];
-		} else {
-			NSLog(@"Error: couldn't get token");
-			NSLog(@"query is %@", requestURL);
-		}
+		NSLog(@"Saving your token: %@", token);
+		[[NSUserDefaults standardUserDefaults] setObject:token forKey:@"myToken"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
 		
 		NSLog(@"Preparation is all done");
 		//[self updateAllListsAndTasks:self];
 		
 		// stamp the time of last sync
-		[[NSUserDefaults standardUserDefaults]
-		 setObject:[[NSCalendarDate calendarDate] description]
-		 forKey:@"lastupdate"];
+		NSLog(@"now: %@", [NSDate date]);
+		
+//		[[NSUserDefaults standardUserDefaults]
+//		 setObject:[[NSDate date] description] forKey:@"lastupdate"];
 		
 		return YES;
-	} else {
-		NSLog(@"Authorization failed");
-		return NO;
 	}
 }
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-	[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"myToken"];
-
-	
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];
 
+	// remove token (for test)
+	//[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"myToken"];
+	
 	// prepare token of Remember the Milk
 	token = [[NSUserDefaults standardUserDefaults] objectForKey:@"myToken"];
 	if (token) {
