@@ -12,23 +12,23 @@
 @implementation WebViewController
 
 @synthesize webView;
+@synthesize url;
+@synthesize appDelegate;
+@synthesize frob;
 
-
-NSString *rtmURL = @"";
--(void)setURL:(NSString *)url
-{
-	rtmURL = url;
-}
-
-UITabBarController *tcon;
--(void)setTabBarController:(UITabBarController *)controller
-{
-	tcon = controller;
-}
 -(IBAction)hideWebView:sender
 {
-	[tcon dismissModalViewControllerAnimated:NO];
+	if ([appDelegate prepareToken:frob]) {
+		[appDelegate.tabBarController dismissModalViewControllerAnimated:YES];
+	}
 }
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+ 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+}
+
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -45,14 +45,6 @@ UITabBarController *tcon;
 - (void)loadView {
 }
 */
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:rtmURL]]];
-}
-
 
 /*
 // Override to allow orientations other than the default portrait orientation.

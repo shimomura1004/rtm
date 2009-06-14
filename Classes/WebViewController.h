@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "rtmAppDelegate.h"
 
 @interface WebViewController : UIViewController {
 	IBOutlet UIWebView *webView;
+	NSString *url;
+	rtmAppDelegate *appDelegate;
+	NSString *frob;
 }
 
 @property (nonatomic, retain) UIWebView *webView;
+@property (retain) NSString *url;
+@property (retain) rtmAppDelegate *appDelegate;
+@property (retain) NSString *frob;
 
--(void)setURL:(NSString *)url;
--(void)setTabBarController:(UITabBarController *)controller;
 -(IBAction)hideWebView:sender;
 
 @end

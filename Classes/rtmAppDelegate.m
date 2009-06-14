@@ -66,7 +66,83 @@ static NSString *token = @"";
 	return [pairs componentsJoinedByString:@"&"];
 }
 
+- (NSString *)prepareFrob
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
+	[params setObject:apiKey forKey:@"api_key"];
+	[params setObject:@"rtm.auth.getFrob" forKey:@"method"];
+	NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
+							stringByAppendingString:[self createRtmQuery:params]];
+	NSXMLElement *rootElement = [self performQuery:requestURL];
+	NSArray *linkNodes = [rootElement nodesForXPath:@"//frob" error:nil];
+	NSString *frob = [[linkNodes objectAtIndex:0] stringValue];
+	NSLog(@"frob is %@", frob);
+	return frob;
+}
+
+- (void)authorizeFrob:(NSString *)frob
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
+	[params setObject:apiKey forKey:@"api_key"];
+	[params setObject:@"read" forKey:@"perms"];
+	[params setObject:frob forKey:@"frob"];
+	NSString *requestURL = [@"http://www.rememberthemilk.com/services/auth/?"
+				  stringByAppendingString:[self createRtmQuery:params]];
+	NSLog(@"REQUEST: %@", requestURL);
+	
+	WebViewController *webcontroller =
+		[[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
+	[webcontroller setUrl:requestURL];
+	[webcontroller setFrob:frob];
+	[webcontroller setAppDelegate:self];
+	[self.tabBarController presentModalViewController:webcontroller animated:YES];
+}
+
+- (BOOL)prepareToken:(NSString *)frob
+{
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
+	[params setObject:apiKey forKey:@"api_key"];
+	[params setObject:@"rtm.auth.getToken" forKey:@"method"];
+	[params setObject:frob forKey:@"frob"];
+	NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
+				  stringByAppendingString:[self createRtmQuery:params]];
+	NSXMLElement *rootElement = [self performQuery:requestURL];
+	NSArray *linkNodes = [rootElement nodesForXPath:@"//token" error:nil];
+	if([linkNodes count] == 1) {
+		NSLog(@"Authorization successed");
+		NSString *token = [[linkNodes objectAtIndex:0] stringValue];
+		NSLog(@"token is %@", token);
+		
+		//Save token
+		if (token)
+		{
+			NSLog(@"Saving your token: %@", token);
+			[[NSUserDefaults standardUserDefaults] setObject:token forKey:@"myToken"];
+			[[NSUserDefaults standardUserDefaults] synchronize];
+		} else {
+			NSLog(@"Error: couldn't get token");
+			NSLog(@"query is %@", requestURL);
+		}
+		
+		NSLog(@"Preparation is all done");
+		//[self updateAllListsAndTasks:self];
+		
+		// stamp the time of last sync
+		[[NSUserDefaults standardUserDefaults]
+		 setObject:[[NSCalendarDate calendarDate] description]
+		 forKey:@"lastupdate"];
+		
+		return YES;
+	} else {
+		NSLog(@"Authorization failed");
+		return NO;
+	}
+}
+
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
+	[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"myToken"];
+
+	
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];
 
@@ -75,66 +151,8 @@ static NSString *token = @"";
 	if (token) {
 		NSLog(@"Token is found in defaults: %@", token);
 	} else {
-		// Get frob
-		NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
-		[params setObject:apiKey forKey:@"api_key"];
-		[params setObject:@"rtm.auth.getFrob" forKey:@"method"];
-		NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
-								stringByAppendingString:[self createRtmQuery:params]];
-		NSXMLElement *rootElement = [self performQuery:requestURL];
-		NSArray *linkNodes = [rootElement nodesForXPath:@"//frob" error:nil];
-		NSString *frob = [[linkNodes objectAtIndex:0] stringValue];
-		NSLog(@"frob is %@", frob);
-		
-		// authorizer URL
-		params = [NSMutableDictionary dictionaryWithCapacity:5];
-		[params setObject:apiKey forKey:@"api_key"];
-		[params setObject:@"read" forKey:@"perms"];
-		[params setObject:frob forKey:@"frob"];
-		requestURL = [@"http://www.rememberthemilk.com/services/auth/?"
-					  stringByAppendingString:[self createRtmQuery:params]];
-		/* WAIT HERE FOR USER TO AUTHORIZE! */
-		//NSRunAlertPanel(@"Authorize me!", requestURL, @"OK", NULL, NULL);
-		
-		WebViewController *webcontroller =
-			[[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-		[webcontroller setURL:requestURL];
-		[webcontroller setTabBarController:self.tabBarController];
-		[self.tabBarController presentModalViewController:webcontroller animated:YES];
-		
-		return;
-		
-		// get token
-		params = [NSMutableDictionary dictionaryWithCapacity:5];
-		[params setObject:apiKey forKey:@"api_key"];
-		[params setObject:@"rtm.auth.getToken" forKey:@"method"];
-		[params setObject:frob forKey:@"frob"];
-		requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
-					  stringByAppendingString:[self createRtmQuery:params]];
-		rootElement = [self performQuery:requestURL];
-		linkNodes = [rootElement nodesForXPath:@"//token" error:nil];
-		NSString *token = [[linkNodes objectAtIndex:0] stringValue];
-		NSLog(@"token is %@", token);
-		
-		// Save token
-		if (token)
-		{
-			[[NSUserDefaults standardUserDefaults] setObject:token forKey:@"myToken"];
-			[[NSUserDefaults standardUserDefaults] synchronize];
-		} else {
-			NSLog(@"Error: couldn't get token");
-			NSLog(@"query is %@", requestURL);
-		}
-		
-		//[self updateAllListsAndTasks:self];
-		
-		// stamp the time of last sync
-		[[NSUserDefaults standardUserDefaults]
-		 setObject:[[NSCalendarDate calendarDate] description]
-		 forKey:@"lastupdate"];
+		[self authorizeFrob:[self prepareFrob]];
 	}
-	
-	NSLog(@"now: %@", [[NSCalendarDate calendarDate] description]);
 }
 
 
