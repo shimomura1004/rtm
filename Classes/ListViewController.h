@@ -7,12 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreData/CoreData.h>
 
 @interface ListViewController : UIViewController {
+	NSEntityDescription *listEntity;
 	IBOutlet UITableView *myTableView;
+
+    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+    NSManagedObjectModel *managedObjectModel;
+    NSManagedObjectContext *managedObjectContext;
 }
 
-@property(nonatomic, retain) UITableView *myTableView;
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+- (NSManagedObjectModel *)managedObjectModel;
+- (NSManagedObjectContext *)managedObjectContext;
+
+@property (nonatomic, retain) UITableView *myTableView;
+@property (retain) NSEntityDescription *listEntity;
 
 @end

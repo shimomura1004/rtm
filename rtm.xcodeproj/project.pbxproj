@@ -20,6 +20,7 @@
 		CA2E0D880FDBFBB700A71A15 /* ListsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2E0D870FDBFBB700A71A15 /* ListsView.xib */; };
 		CA6150C70FDF7BFA00D5AFDD /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6150C60FDF7BFA00D5AFDD /* ListViewController.m */; };
 		CA70D73A0FE2B44C00ABF9CB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA70D7390FE2B44C00ABF9CB /* WebViewController.m */; };
+		CABB13D40FEA898F00CA396F /* RTM.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = CABB13D30FEA898F00CA396F /* RTM.xcdatamodel */; };
 		CABCA69A0FE3711C0052FB10 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABCA6990FE3711C0052FB10 /* WebView.xib */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		CA6150C60FDF7BFA00D5AFDD /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		CA70D7380FE2B44C00ABF9CB /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		CA70D7390FE2B44C00ABF9CB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		CABB13D30FEA898F00CA396F /* RTM.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = RTM.xcdatamodel; sourceTree = "<group>"; };
 		CABCA6990FE3711C0052FB10 /* WebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,14 +67,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA70D77D0FE2B8A000ABF9CB /* AuthorizeView */,
 				CA0D8B520FE4DE640051C5DE /* XMLParser */,
+				CABB13F60FEA8E9500CA396F /* List */,
+				CABB13F70FEA8EAD00CA396F /* Task */,
 				28216C950DB411BC00E5133A /* FirstViewController.h */,
 				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				1D3623240D0F684500981E51 /* rtmAppDelegate.h */,
 				1D3623250D0F684500981E51 /* rtmAppDelegate.m */,
-				CA6150C50FDF7BF900D5AFDD /* ListViewController.h */,
-				CA6150C60FDF7BFA00D5AFDD /* ListViewController.m */,
-				CA70D77D0FE2B8A000ABF9CB /* WebView */,
+				CABB13D30FEA898F00CA396F /* RTM.xcdatamodel */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -138,13 +141,29 @@
 			name = XMLParser;
 			sourceTree = "<group>";
 		};
-		CA70D77D0FE2B8A000ABF9CB /* WebView */ = {
+		CA70D77D0FE2B8A000ABF9CB /* AuthorizeView */ = {
 			isa = PBXGroup;
 			children = (
 				CA70D7380FE2B44C00ABF9CB /* WebViewController.h */,
 				CA70D7390FE2B44C00ABF9CB /* WebViewController.m */,
 			);
-			name = WebView;
+			name = AuthorizeView;
+			sourceTree = "<group>";
+		};
+		CABB13F60FEA8E9500CA396F /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CA6150C50FDF7BF900D5AFDD /* ListViewController.h */,
+				CA6150C60FDF7BFA00D5AFDD /* ListViewController.m */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		CABB13F70FEA8EAD00CA396F /* Task */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +229,7 @@
 				CA6150C70FDF7BFA00D5AFDD /* ListViewController.m in Sources */,
 				CA70D73A0FE2B44C00ABF9CB /* WebViewController.m in Sources */,
 				CA0D8BCF0FE4EB1F0051C5DE /* AuthParser.m in Sources */,
+				CABB13D40FEA898F00CA396F /* RTM.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
