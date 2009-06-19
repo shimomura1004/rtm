@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA2A36B0FEB33D600F53EBB /* DB */,
-				CAC72D240FEBE7FA00475578 /* RTM */,
+				CAC72D240FEBE7FA00475578 /* RtmController */,
 				CAA2A36C0FEB33DB00F53EBB /* Authorize */,
 				CAEE350B0FEB381B00E568E3 /* List */,
 				28216C950DB411BC00E5133A /* FirstViewController.h */,
@@ -169,13 +169,13 @@
 			name = Authorize;
 			sourceTree = "<group>";
 		};
-		CAC72D240FEBE7FA00475578 /* RTM */ = {
+		CAC72D240FEBE7FA00475578 /* RtmController */ = {
 			isa = PBXGroup;
 			children = (
 				CAC72D250FEBE82B00475578 /* RtmController.h */,
 				CAC72D260FEBE82B00475578 /* RtmController.m */,
 			);
-			name = RTM;
+			name = RtmController;
 			sourceTree = "<group>";
 		};
 		CAEE350B0FEB381B00E568E3 /* List */ = {

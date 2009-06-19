@@ -8,10 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface RtmController : NSObject {
+	UITabBarController *tabBarController;
+	
 	NSString *frob;
 	NSString *token;
 }
+
+@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+@property (retain) NSString *frob;
+@property (retain) NSString *token;
+
++ (RtmController *)defaultRtmController;
+- (void)checkToken;
+- (void)updateAllListsAndTasks;
 
 @end

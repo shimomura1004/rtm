@@ -11,16 +11,9 @@
 @interface rtmAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
     UIWindow *window;
     UITabBarController *tabBarController;
-	
-	NSString *frob;
-	NSString *token;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
-@property (retain) NSString *frob;
-@property (retain) NSString *token;
-
-- (void)prepareToken:(NSNotification *)notification;
 
 @end
