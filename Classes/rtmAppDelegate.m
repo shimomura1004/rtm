@@ -2,22 +2,23 @@
 //  rtmAppDelegate.m
 //  rtm
 //
-//  Created by 下村 翔 on 6/7/09.
+//  Created by 下村 翔 on 6/19/09.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
 #import "rtmAppDelegate.h"
 #import <CommonCrypto/CommonDigest.h>
-#import "WebViewController.h"
+#import "AuthorizeViewController.h"
 #import "AuthParser.h"
 
 @implementation rtmAppDelegate
 
 @synthesize window;
 @synthesize tabBarController;
+@synthesize frob;
+@synthesize token;
 
 static NSString *apiKey = @"5a98a85fa1591ea18410784a2fd97669";
-static NSString *token = @"";
 
 - (NSString *) createMD5String:(NSString *)orig {
 	const char *test_cstr = [orig UTF8String];
@@ -56,7 +57,7 @@ static NSString *token = @"";
 	return [pairs componentsJoinedByString:@"&"];
 }
 
-- (NSString *)prepareFrob
+- (void)prepareFrob
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
 	[params setObject:apiKey forKey:@"api_key"];
@@ -69,38 +70,37 @@ static NSString *token = @"";
 	[frobParser setTargetTagName:@"frob"];
 	[parser setDelegate:frobParser];
 	[parser parse];
-	NSString *frob = [frobParser result];
+	[self setFrob:[frobParser result]];
 	NSLog(@"frob is %@", frob);
-	
-	return frob;
 }
 
-- (void)authorizeFrob:(NSString *)frob
+- (void)authorizeFrob
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
 	[params setObject:apiKey forKey:@"api_key"];
 	[params setObject:@"read" forKey:@"perms"];
 	[params setObject:frob forKey:@"frob"];
 	NSString *requestURL = [@"http://www.rememberthemilk.com/services/auth/?"
-				  stringByAppendingString:[self createRtmQuery:params]];
+							stringByAppendingString:[self createRtmQuery:params]];
 	NSLog(@"REQUEST: %@", requestURL);
 	
-	WebViewController *webcontroller =
-		[[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-	[webcontroller setUrl:requestURL];
-	[webcontroller setFrob:frob];
-	[webcontroller setAppDelegate:self];
-	[self.tabBarController presentModalViewController:webcontroller animated:YES];
+	AuthorizeViewController *authController =
+	[[AuthorizeViewController alloc] initWithNibName:@"AuthorizeView" bundle:nil];
+	[authController setUrl:requestURL];
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:self selector:@selector(prepareToken:)
+	 name:@"DidFrobAuthorizationFinished" object:nil];
+	[self.tabBarController presentModalViewController:authController animated:YES];
 }
 
-- (BOOL)prepareToken:(NSString *)frob
+- (void)prepareToken:(NSNotification *)notification
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
 	[params setObject:apiKey forKey:@"api_key"];
 	[params setObject:@"rtm.auth.getToken" forKey:@"method"];
 	[params setObject:frob forKey:@"frob"];
 	NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
-				  stringByAppendingString:[self createRtmQuery:params]];
+							stringByAppendingString:[self createRtmQuery:params]];
 	NSXMLParser *parser = [[NSXMLParser alloc]
 						   initWithContentsOfURL:[NSURL URLWithString:requestURL]];
 	AuthParser *tokenParser = [[AuthParser alloc] init];
@@ -112,7 +112,6 @@ static NSString *token = @"";
 	if ([token isEqualToString:@""])
 	{
 		NSLog(@"Authorization failed");
-		return NO;
 	} else {
 		NSLog(@"token is %@", token);
 		
@@ -127,10 +126,10 @@ static NSString *token = @"";
 		// stamp the time of last sync
 		NSLog(@"now: %@", [NSDate date]);
 		
-//		[[NSUserDefaults standardUserDefaults]
-//		 setObject:[[NSDate date] description] forKey:@"lastupdate"];
+		//		[[NSUserDefaults standardUserDefaults]
+		//		 setObject:[[NSDate date] description] forKey:@"lastupdate"];
 		
-		return YES;
+		[self.tabBarController dismissModalViewControllerAnimated:YES];
 	}
 }
 
@@ -146,7 +145,8 @@ static NSString *token = @"";
 	if (token) {
 		NSLog(@"Token is found in defaults: %@", token);
 	} else {
-		[self authorizeFrob:[self prepareFrob]];
+		[self prepareFrob];
+		[self authorizeFrob];
 	}
 }
 

@@ -10,19 +10,14 @@
 #import <CoreData/CoreData.h>
 
 @interface ListViewController : UIViewController {
-	NSEntityDescription *listEntity;
 	IBOutlet UITableView *myTableView;
+	NSMutableArray *listArray;
 
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;
+	NSManagedObjectContext *managedObjectContext;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
-- (NSManagedObjectModel *)managedObjectModel;
-- (NSManagedObjectContext *)managedObjectContext;
-
 @property (nonatomic, retain) UITableView *myTableView;
-@property (retain) NSEntityDescription *listEntity;
+@property (nonatomic, retain) NSMutableArray *listArray;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end

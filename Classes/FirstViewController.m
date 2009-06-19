@@ -2,7 +2,7 @@
 //  FirstViewController.m
 //  rtm
 //
-//  Created by 下村 翔 on 6/7/09.
+//  Created by 下村 翔 on 6/19/09.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
@@ -44,8 +44,15 @@
 */
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+	// Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+	
+	// Release any cached data, images, etc that aren't in use.
+}
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
 }
 
 

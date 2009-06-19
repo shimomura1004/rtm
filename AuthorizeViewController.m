@@ -1,37 +1,35 @@
 //
-//  WebViewController.m
+//  AuthorizeViewController.m
 //  rtm
 //
-//  Created by 下村 翔 on 6/13/09.
+//  Created by 下村 翔 on 6/19/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "WebViewController.h"
+#import "AuthorizeViewController.h"
 
 
-@implementation WebViewController
+@implementation AuthorizeViewController
 
-@synthesize webView;
+@synthesize authorizeView;
 @synthesize url;
-@synthesize appDelegate;
-@synthesize frob;
 
--(IBAction)hideWebView:sender
+-(IBAction)hideAuthorizeView:sender
 {
-	if ([appDelegate prepareToken:frob]) {
-		[appDelegate.tabBarController dismissModalViewControllerAnimated:YES];
-	}
+	[[NSNotificationCenter defaultCenter]
+	 postNotification:[NSNotification
+					   notificationWithName:@"DidFrobAuthorizationFinished" object:nil]];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
- 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+	[super viewDidLoad];
+	[authorizeView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
 
 /*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
+ // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
@@ -55,8 +53,15 @@
 */
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+	// Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+	
+	// Release any cached data, images, etc that aren't in use.
+}
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
 }
 
 
