@@ -11,7 +11,7 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		28216C970DB411BC00E5133A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* FirstViewController.m */; };
+		28216C970DB411BC00E5133A /* OverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* OverViewController.m */; };
 		282CCBFE0DB6C98000C4EA27 /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* ListView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
@@ -34,8 +34,8 @@
 		1D3623250D0F684500981E51 /* rtmAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rtmAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* rtm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rtm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		28216C950DB411BC00E5133A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		28216C960DB411BC00E5133A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		28216C950DB411BC00E5133A /* OverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverViewController.h; sourceTree = "<group>"; };
+		28216C960DB411BC00E5133A /* OverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverViewController.m; sourceTree = "<group>"; };
 		282CCBFD0DB6C98000C4EA27 /* ListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* rtm_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rtm_Prefix.pch; sourceTree = "<group>"; };
@@ -83,9 +83,8 @@
 				CAA2A36B0FEB33D600F53EBB /* DB */,
 				CAC72D240FEBE7FA00475578 /* RtmController */,
 				CAA2A36C0FEB33DB00F53EBB /* Authorize */,
+				CAC72E010FEBFF6600475578 /* Overview */,
 				CAEE350B0FEB381B00E568E3 /* List */,
-				28216C950DB411BC00E5133A /* FirstViewController.h */,
-				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				1D3623240D0F684500981E51 /* rtmAppDelegate.h */,
 				1D3623250D0F684500981E51 /* rtmAppDelegate.m */,
 			);
@@ -178,6 +177,15 @@
 			name = RtmController;
 			sourceTree = "<group>";
 		};
+		CAC72E010FEBFF6600475578 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				28216C950DB411BC00E5133A /* OverViewController.h */,
+				28216C960DB411BC00E5133A /* OverViewController.m */,
+			);
+			name = Overview;
+			sourceTree = "<group>";
+		};
 		CAEE350B0FEB381B00E568E3 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +253,7 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* rtmAppDelegate.m in Sources */,
-				28216C970DB411BC00E5133A /* FirstViewController.m in Sources */,
+				28216C970DB411BC00E5133A /* OverViewController.m in Sources */,
 				CAD738450FEB373000DE44E5 /* RTM.xcdatamodel in Sources */,
 				CAD7384D0FEB376E00DE44E5 /* List.m in Sources */,
 				CAD7384E0FEB376E00DE44E5 /* Task.m in Sources */,

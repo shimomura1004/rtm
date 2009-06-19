@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  OverViewController.h
 //  rtm
 //
 //  Created by 下村 翔 on 6/19/09.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FirstViewController : UIViewController {
+@interface OverViewController : UIViewController {
 
 }
 
