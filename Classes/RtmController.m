@@ -121,13 +121,9 @@ static RtmController *rtmController;
 	{
 		NSLog(@"Authorization failed");
 	} else {
-		NSLog(@"token is %@", token);
-		
-		//Save token
 		NSLog(@"Saving your token: %@", token);
 		[[NSUserDefaults standardUserDefaults] setObject:token forKey:@"myToken"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
-		
 		NSLog(@"Preparation is all done");		
 		[self.tabBarController dismissModalViewControllerAnimated:YES];
 	}
@@ -135,7 +131,8 @@ static RtmController *rtmController;
 
 - (void) checkToken
 {
-	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"myToken"]) {
+	[self setToken:[[NSUserDefaults standardUserDefaults] objectForKey:@"myToken"]];
+	if (token) {
 		NSLog(@"Token is found in defaults: %@", token);
 	} else {
 		NSLog(@"Token is not found!");

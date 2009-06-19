@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -277,8 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>1</integer>
+									<integer>14</integer>
+									<integer>13</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -313,12 +311,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>rtmAppDelegate.h</string>
+								<string>FirstViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>rtmAppDelegate.h</string>
+										<string>FirstViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CAC72DBA0FEBFB0B00475578</string>
+										<string>CAC72DF70FEBFE9200475578</string>
 										<key>history</key>
 										<array>
 											<string>CAD738560FEB37D500DE44E5</string>
@@ -340,13 +340,13 @@
 											<string>CAC72C7C0FEBD51700475578</string>
 											<string>CAC72C7D0FEBD51700475578</string>
 											<string>CAC72D4D0FEBFADC00475578</string>
-											<string>CAC72D4E0FEBFADC00475578</string>
-											<string>CAC72D4F0FEBFADC00475578</string>
-											<string>CAC72D500FEBFADC00475578</string>
-											<string>CAC72DB30FEBFB0B00475578</string>
-											<string>CAC72DB40FEBFB0B00475578</string>
-											<string>CAC72DB50FEBFB0B00475578</string>
-											<string>CAC72D4C0FEBFADC00475578</string>
+											<string>CAC72DC40FEBFD3A00475578</string>
+											<string>CAC72DDF0FEBFDE000475578</string>
+											<string>CAC72DE00FEBFDE000475578</string>
+											<string>CAC72DE10FEBFDE000475578</string>
+											<string>CAC72DE90FEBFE3B00475578</string>
+											<string>CAC72DF30FEBFE9200475578</string>
+											<string>CAC72DF40FEBFE9200475578</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -547,6 +547,31 @@
 											<string>CAC72DB70FEBFB0B00475578</string>
 											<string>CAC72DB80FEBFB0B00475578</string>
 											<string>CAC72DB90FEBFB0B00475578</string>
+											<string>CAC72DC80FEBFD3A00475578</string>
+											<string>CAC72DC90FEBFD3A00475578</string>
+											<string>CAC72DCA0FEBFD3A00475578</string>
+											<string>CAC72DCB0FEBFD3A00475578</string>
+											<string>CAC72DCC0FEBFD3A00475578</string>
+											<string>CAC72DCD0FEBFD3A00475578</string>
+											<string>CAC72DCE0FEBFD3A00475578</string>
+											<string>CAC72DCF0FEBFD3A00475578</string>
+											<string>CAC72DD00FEBFD3A00475578</string>
+											<string>CAC72DD10FEBFD3A00475578</string>
+											<string>CAC72DD20FEBFD3A00475578</string>
+											<string>CAC72DD30FEBFD3A00475578</string>
+											<string>CAC72DD40FEBFD3A00475578</string>
+											<string>CAC72DD50FEBFD3A00475578</string>
+											<string>CAC72DD60FEBFD3A00475578</string>
+											<string>CAC72DD70FEBFD3A00475578</string>
+											<string>CAC72DE20FEBFDE000475578</string>
+											<string>CAC72DE30FEBFDE000475578</string>
+											<string>CAC72DE40FEBFDE000475578</string>
+											<string>CAC72DE50FEBFDE000475578</string>
+											<string>CAC72DEC0FEBFE3B00475578</string>
+											<string>CAC72DED0FEBFE3B00475578</string>
+											<string>CAC72DEE0FEBFE3B00475578</string>
+											<string>CAC72DF50FEBFE9200475578</string>
+											<string>CAC72DF60FEBFE9200475578</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
