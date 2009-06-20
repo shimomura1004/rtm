@@ -11,21 +11,26 @@
 
 @implementation ListViewController
 
-@synthesize myTableView;
-@synthesize listArray;
-@synthesize managedObjectContext;
+@synthesize myTableView, listArray, managedObjectContext;
 
+
+-(IBAction)refreshAllListsAndTasks:sender
+{
+	NSLog(@"Notify!");
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	
-	NSManagedObjectContext *context = [self managedObjectContext];
-	List *newList = (List *)[NSEntityDescription insertNewObjectForEntityForName:@"List"
-					 inManagedObjectContext:context];
+	NSLog(@"%@", managedObjectContext);
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"List" inManagedObjectContext:managedObjectContext];
 
-
+//	List *newList = (List *)[NSEntityDescription
+//							 insertNewObjectForEntityForName:@"List"
+//							 inManagedObjectContext:context];
+//	newList;
 }
 
 

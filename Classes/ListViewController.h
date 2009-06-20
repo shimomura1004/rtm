@@ -20,4 +20,6 @@
 @property (nonatomic, retain) NSMutableArray *listArray;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
+-(IBAction)refreshAllListsAndTasks:sender;
+
 @end
