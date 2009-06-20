@@ -16,17 +16,19 @@
 
 -(IBAction)refreshAllListsAndTasks:sender
 {
-	NSLog(@"Notify!");
+	[[NSNotificationCenter defaultCenter]
+	 postNotification:[NSNotification
+					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
+}
+
+-(void)updateList
+{
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
-	NSLog(@"%@", managedObjectContext);
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"List" inManagedObjectContext:managedObjectContext];
-
 //	List *newList = (List *)[NSEntityDescription
 //							 insertNewObjectForEntityForName:@"List"
 //							 inManagedObjectContext:context];

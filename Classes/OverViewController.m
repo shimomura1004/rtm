@@ -8,12 +8,13 @@
 
 #import "OverViewController.h"
 
-
 @implementation OverViewController
 
 -(IBAction)refreshAllListsAndTasks:sender
 {
-	NSLog(@"Notify!");
+	[[NSNotificationCenter defaultCenter]
+	 postNotification:[NSNotification
+					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
 }
 
 /*

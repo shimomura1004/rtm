@@ -22,6 +22,11 @@
 	
 	// remove token (for test)
 	//[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"myToken"];
+
+	// update button
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:[RtmController defaultRtmController]
+	 selector:@selector(updateAllListsAndTasks) name:@"UpdateAllListsAndTasks" object:nil];
 	
 	// prepare token of Remember the Milk
 	RtmController *rtmController = [RtmController defaultRtmController];
