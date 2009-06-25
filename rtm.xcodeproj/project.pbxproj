@@ -19,11 +19,16 @@
 		CAC72C6F0FEBD3EC00475578 /* AuthorizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC72C6E0FEBD3EC00475578 /* AuthorizeViewController.m */; };
 		CAC72D270FEBE82B00475578 /* RtmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC72D260FEBE82B00475578 /* RtmController.m */; };
 		CAD738450FEB373000DE44E5 /* RTM.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = CAD738440FEB373000DE44E5 /* RTM.xcdatamodel */; };
-		CAD7384D0FEB376E00DE44E5 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD738480FEB376E00DE44E5 /* List.m */; };
 		CAD7384E0FEB376E00DE44E5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD7384A0FEB376E00DE44E5 /* Task.m */; };
 		CAD7384F0FEB376E00DE44E5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD7384C0FEB376E00DE44E5 /* Note.m */; };
 		CAD738540FEB37AE00DE44E5 /* AuthParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD738530FEB37AE00DE44E5 /* AuthParser.m */; };
 		CAD766790FEC846900FA0909 /* sabo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CAD766780FEC846900FA0909 /* sabo.jpeg */; };
+		CAD851AD0FF279050064E5F6 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD851AC0FF279050064E5F6 /* SearchView.xib */; };
+		CAD851BE0FF27A720064E5F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD851BD0FF27A720064E5F6 /* SearchViewController.m */; };
+		CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD851CE0FF280870064E5F6 /* TagView.xib */; };
+		CAD851EB0FF2854D0064E5F6 /* RtmListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD851EA0FF2854D0064E5F6 /* RtmListParser.m */; };
+		CAD852920FF28DFF0064E5F6 /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD852910FF28DFF0064E5F6 /* TaskList.m */; };
+		CAD853420FF320D50064E5F6 /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD853410FF320D50064E5F6 /* TagViewController.m */; };
 		CAEE350F0FEB382900E568E3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE350D0FEB382900E568E3 /* ListViewController.m */; };
 		CAEE35180FEB9BB800E568E3 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEE35170FEB9BB800E568E3 /* MenuView.xib */; };
 		CAEE351A0FEB9BC200E568E3 /* AuthorizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEE35190FEB9BC200E568E3 /* AuthorizeView.xib */; };
@@ -49,8 +54,6 @@
 		CAC72D250FEBE82B00475578 /* RtmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtmController.h; sourceTree = "<group>"; };
 		CAC72D260FEBE82B00475578 /* RtmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RtmController.m; sourceTree = "<group>"; };
 		CAD738440FEB373000DE44E5 /* RTM.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = RTM.xcdatamodel; sourceTree = "<group>"; };
-		CAD738470FEB376E00DE44E5 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
-		CAD738480FEB376E00DE44E5 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		CAD738490FEB376E00DE44E5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		CAD7384A0FEB376E00DE44E5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		CAD7384B0FEB376E00DE44E5 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
@@ -58,6 +61,16 @@
 		CAD738530FEB37AE00DE44E5 /* AuthParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthParser.m; sourceTree = "<group>"; };
 		CAD738550FEB37B500DE44E5 /* AuthParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthParser.h; sourceTree = "<group>"; };
 		CAD766780FEC846900FA0909 /* sabo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sabo.jpeg; sourceTree = "<group>"; };
+		CAD851AC0FF279050064E5F6 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchView.xib; path = ../SearchView.xib; sourceTree = "<group>"; };
+		CAD851BC0FF27A720064E5F6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CAD851BD0FF27A720064E5F6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		CAD851CE0FF280870064E5F6 /* TagView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagView.xib; sourceTree = "<group>"; };
+		CAD851E90FF2854D0064E5F6 /* RtmListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtmListParser.h; sourceTree = "<group>"; };
+		CAD851EA0FF2854D0064E5F6 /* RtmListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RtmListParser.m; sourceTree = "<group>"; };
+		CAD852900FF28DFF0064E5F6 /* TaskList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskList.h; sourceTree = "<group>"; };
+		CAD852910FF28DFF0064E5F6 /* TaskList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskList.m; sourceTree = "<group>"; };
+		CAD853400FF320D50064E5F6 /* TagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
+		CAD853410FF320D50064E5F6 /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
 		CAEE350D0FEB382900E568E3 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		CAEE350E0FEB382900E568E3 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		CAEE35170FEB9BB800E568E3 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MenuView.xib; path = ../MenuView.xib; sourceTree = "<group>"; };
@@ -88,6 +101,8 @@
 				CAA2A36C0FEB33DB00F53EBB /* Authorize */,
 				CAC72E010FEBFF6600475578 /* Overview */,
 				CAEE350B0FEB381B00E568E3 /* List */,
+				CAD851C70FF27FFE0064E5F6 /* Tag */,
+				CAD851AF0FF2790C0064E5F6 /* Search */,
 				1D3623240D0F684500981E51 /* rtmAppDelegate.h */,
 				1D3623250D0F684500981E51 /* rtmAppDelegate.m */,
 			);
@@ -146,8 +161,8 @@
 		CAA2A36B0FEB33D600F53EBB /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CAD738470FEB376E00DE44E5 /* List.h */,
-				CAD738480FEB376E00DE44E5 /* List.m */,
+				CAD852900FF28DFF0064E5F6 /* TaskList.h */,
+				CAD852910FF28DFF0064E5F6 /* TaskList.m */,
 				CAD738490FEB376E00DE44E5 /* Task.h */,
 				CAD7384A0FEB376E00DE44E5 /* Task.m */,
 				CAD7384B0FEB376E00DE44E5 /* Note.h */,
@@ -174,6 +189,8 @@
 			children = (
 				CAC72D250FEBE82B00475578 /* RtmController.h */,
 				CAC72D260FEBE82B00475578 /* RtmController.m */,
+				CAD851E90FF2854D0064E5F6 /* RtmListParser.h */,
+				CAD851EA0FF2854D0064E5F6 /* RtmListParser.m */,
 			);
 			name = RtmController;
 			sourceTree = "<group>";
@@ -194,6 +211,26 @@
 				CAD766780FEC846900FA0909 /* sabo.jpeg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		CAD851AF0FF2790C0064E5F6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CAD851AC0FF279050064E5F6 /* SearchView.xib */,
+				CAD851BC0FF27A720064E5F6 /* SearchViewController.h */,
+				CAD851BD0FF27A720064E5F6 /* SearchViewController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		CAD851C70FF27FFE0064E5F6 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				CAD851CE0FF280870064E5F6 /* TagView.xib */,
+				CAD853400FF320D50064E5F6 /* TagViewController.h */,
+				CAD853410FF320D50064E5F6 /* TagViewController.m */,
+			);
+			name = Tag;
 			sourceTree = "<group>";
 		};
 		CAEE350B0FEB381B00E568E3 /* List */ = {
@@ -253,6 +290,8 @@
 				CAEE35180FEB9BB800E568E3 /* MenuView.xib in Resources */,
 				CAEE351A0FEB9BC200E568E3 /* AuthorizeView.xib in Resources */,
 				CAD766790FEC846900FA0909 /* sabo.jpeg in Resources */,
+				CAD851AD0FF279050064E5F6 /* SearchView.xib in Resources */,
+				CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,13 +306,16 @@
 				1D3623260D0F684500981E51 /* rtmAppDelegate.m in Sources */,
 				28216C970DB411BC00E5133A /* OverViewController.m in Sources */,
 				CAD738450FEB373000DE44E5 /* RTM.xcdatamodel in Sources */,
-				CAD7384D0FEB376E00DE44E5 /* List.m in Sources */,
 				CAD7384E0FEB376E00DE44E5 /* Task.m in Sources */,
 				CAD7384F0FEB376E00DE44E5 /* Note.m in Sources */,
 				CAD738540FEB37AE00DE44E5 /* AuthParser.m in Sources */,
 				CAEE350F0FEB382900E568E3 /* ListViewController.m in Sources */,
 				CAC72C6F0FEBD3EC00475578 /* AuthorizeViewController.m in Sources */,
 				CAC72D270FEBE82B00475578 /* RtmController.m in Sources */,
+				CAD851BE0FF27A720064E5F6 /* SearchViewController.m in Sources */,
+				CAD851EB0FF2854D0064E5F6 /* RtmListParser.m in Sources */,
+				CAD852920FF28DFF0064E5F6 /* TaskList.m in Sources */,
+				CAD853420FF320D50064E5F6 /* TagViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

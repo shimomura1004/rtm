@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "TaskList.h"
 
 @interface ListViewController : UIViewController {
 	IBOutlet UITableView *myTableView;
@@ -17,9 +18,11 @@
 }
 
 @property (nonatomic, retain) UITableView *myTableView;
-@property (nonatomic, retain) NSMutableArray *listArray;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain, readonly) NSArray *listArray;
 
+-(void)applicationDidFinishLaunching:(UIApplication *)application;
 -(IBAction)refreshAllListsAndTasks:sender;
+-(void)updateListArray;
 
 @end

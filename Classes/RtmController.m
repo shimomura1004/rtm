@@ -7,15 +7,12 @@
 //
 
 #import "RtmController.h"
-#import <CommonCrypto/CommonDigest.h>
-#import "AuthorizeViewController.h"
-#import "AuthParser.h"
 
 @implementation RtmController
 
 @synthesize tabBarController;
-@synthesize frob;
-@synthesize token;
+@synthesize frob, token;
+@synthesize managedObjectContext;
 
 static NSString *apiKey = @"5a98a85fa1591ea18410784a2fd97669";
 static RtmController *rtmController;
@@ -141,13 +138,66 @@ static RtmController *rtmController;
 	}
 }
 
-- (void) updateAllListsAndTasks
+-(void)updateTaskList
 {
-	// stamp the time of last sync
-	NSLog(@"now: %@", [NSDate date]);
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
+	[params setObject:apiKey forKey:@"api_key"];
+	[params setObject:@"rtm.lists.getList" forKey:@"method"];
+	[params setObject:token forKey:@"auth_token"];
+	NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
+							stringByAppendingString:[self createRtmQuery:params]];
+	NSXMLParser *parser = [[NSXMLParser alloc]
+						   initWithContentsOfURL:[NSURL URLWithString:requestURL]];
+	RtmListParser *listParser = [[RtmListParser alloc] init];
+	[listParser setManagedObjectContext:[self managedObjectContext]];
+	[parser setDelegate:listParser];
+	[parser parse];
 	
-	//		[[NSUserDefaults standardUserDefaults]
-	//		 setObject:[[NSDate date] description] forKey:@"lastupdate"];
+	// TODO: display animation while loading
+	NSLog(@"Complete: update all lists");
+	
+	[[NSNotificationCenter defaultCenter]
+	 postNotification:[NSNotification
+					   notificationWithName:@"DidTaskListUpdated" object:nil]];
 }
+
+-(void) updateTasks:(NSString *)taskListName
+{
+}
+
+-(void) updateAllTasks
+{
+	// for each (taskListName in TasksList) [self updateTasks:taskListName];
+	NSLog(@"Complete: update all tasks");
+}
+
+-(void) updateAllListsAndTasks
+{
+	// first, remove all lists and tasks
+	NSManagedObjectContext *context = [self managedObjectContext];
+	
+	//	NSLog(@"Delete all tasks");
+	//	self.statusText = @"Delete all tasks";
+	//	[statusField display];
+	//	NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	//	[req setEntity:[NSEntityDescription entityForName:@"Task" inManagedObjectContext:context]];
+	//	for (Task *task in [context executeFetchRequest:req error:nil])
+	//	{
+	//		[context deleteObject:task];
+	//	}
+	
+	NSLog(@"Delete all Lists");
+	NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	[req setEntity:[NSEntityDescription entityForName:@"TaskList" inManagedObjectContext:context]];
+	for (TaskList *list in [context executeFetchRequest:req error:nil])
+	{
+		[context deleteObject:list];
+	}
+
+	
+	[self updateTaskList];
+	[self updateAllTasks];
+}
+
 
 @end

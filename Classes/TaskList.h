@@ -1,8 +1,8 @@
 //
-//  List.h
+//  TaskList.h
 //  rtm
 //
-//  Created by 下村 翔 on 6/19/09.
+//  Created by 下村 翔 on 6/25/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class Task;
 
-@interface List :  NSManagedObject  
+@interface TaskList :  NSManagedObject  
 {
 }
 
@@ -20,7 +20,7 @@
 @end
 
 
-@interface List (CoreDataGeneratedAccessors)
+@interface TaskList (CoreDataGeneratedAccessors)
 - (void)addTasksObject:(Task *)value;
 - (void)removeTasksObject:(Task *)value;
 - (void)addTasks:(NSSet *)value;

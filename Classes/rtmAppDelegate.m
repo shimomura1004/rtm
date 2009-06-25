@@ -12,11 +12,12 @@
 @implementation rtmAppDelegate
 
 @synthesize window, tabBarController;
-@synthesize listViewController;
+@synthesize overViewController, listViewController, tagViewController, searchViewController;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	listViewController.managedObjectContext = self.managedObjectContext;
-
+	[listViewController applicationDidFinishLaunching:application];
+	
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];
 	
@@ -24,6 +25,7 @@
 	//[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"myToken"];
 
 	// update button
+	[[RtmController defaultRtmController] setManagedObjectContext:[self managedObjectContext]];
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:[RtmController defaultRtmController]
 	 selector:@selector(updateAllListsAndTasks) name:@"UpdateAllListsAndTasks" object:nil];

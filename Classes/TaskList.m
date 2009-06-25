@@ -1,16 +1,16 @@
 // 
-//  List.m
+//  TaskList.m
 //  rtm
 //
-//  Created by 下村 翔 on 6/19/09.
+//  Created by 下村 翔 on 6/25/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "List.h"
+#import "TaskList.h"
 
 #import "Task.h"
 
-@implementation List 
+@implementation TaskList 
 
 @dynamic listName;
 @dynamic tasks;

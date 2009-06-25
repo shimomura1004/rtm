@@ -7,12 +7,20 @@
 //
 
 #import "ListViewController.h"
-#import "List.h"
 
 @implementation ListViewController
 
 @synthesize myTableView, listArray, managedObjectContext;
 
+-(void)applicationDidFinishLaunching:(UIApplication *)application
+{
+	// when TaskList is updated, TaskList-array must be updated
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:self
+	 selector:@selector(updateListArray) name:@"DidTaskListUpdated" object:nil];
+	
+	listArray = [[NSMutableArray alloc] init];
+}
 
 -(IBAction)refreshAllListsAndTasks:sender
 {
@@ -21,37 +29,46 @@
 					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
 }
 
--(void)updateList
+/** This method is called when TaskList in CoreData is updated */
+-(void)updateListArray
 {
+	NSLog(@"updating TaskList-array");
+	[listArray removeAllObjects];
+	
+	NSManagedObjectContext *context = [self managedObjectContext];
+	NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	[req setEntity:[NSEntityDescription entityForName:@"TaskList" inManagedObjectContext:context]];
+	for (TaskList *list in [context executeFetchRequest:req error:nil])
+	{
+		NSLog(@"GETTING: %@", [list listName]);
+		[listArray addObject:[NSString stringWithString:[list listName]]];
+	}
+	[myTableView reloadData];
 }
 
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-//	List *newList = (List *)[NSEntityDescription
-//							 insertNewObjectForEntityForName:@"List"
-//							 inManagedObjectContext:context];
-//	newList;
 }
-
+*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 1;
+	NSLog(@"NUM: %d", listArray.count);
+	return listArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+	UITableViewCell *cellDefault = [tableView dequeueReusableCellWithIdentifier:@"cellDefault"];
+	if (cellDefault == nil) {
+		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellDefault"] autorelease];
+	}
 	
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-    }
-	
-	// Set up the cell...
-    return cell;
+	cellDefault.textLabel.text = [listArray objectAtIndex:indexPath.row];
+	return cellDefault;
 }
 
 /*

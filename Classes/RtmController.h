@@ -7,20 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import <CommonCrypto/CommonDigest.h>
+#import "AuthorizeViewController.h"
+#import "AuthParser.h"
+#import "RtmListParser.h"
 
 @interface RtmController : NSObject {
 	UITabBarController *tabBarController;
 	
 	NSString *frob;
 	NSString *token;
+	NSManagedObjectContext *managedObjectContext;
 }
 
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (retain) NSString *frob;
 @property (retain) NSString *token;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 + (RtmController *)defaultRtmController;
 - (void)checkToken;
 - (void)updateAllListsAndTasks;
+- (void)updateAllTasks;
 
 @end
