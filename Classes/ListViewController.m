@@ -55,7 +55,8 @@
 {
 	UITableViewCell *cellDefault = [tableView dequeueReusableCellWithIdentifier:@"cellDefault"];
 	if (cellDefault == nil) {
-		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellDefault"] autorelease];
+		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+											  reuseIdentifier:@"cellDefault"] autorelease];
 	}
 	
 	cellDefault.textLabel.text = [listArray objectAtIndex:indexPath.row];
