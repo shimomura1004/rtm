@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "TaskList.h"
+#import "ListDetailViewController.h"
 
 @interface ListViewController : UIViewController {
 	IBOutlet UITableView *myTableView;

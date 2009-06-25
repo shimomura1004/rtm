@@ -12,13 +12,15 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28216C970DB411BC00E5133A /* OverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* OverViewController.m */; };
-		282CCBFE0DB6C98000C4EA27 /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* ListView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		CA0AAAC20FF3A2F400789C8C /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0AAAC10FF3A2F400789C8C /* TaskList.m */; };
 		CAA2A3C00FEB360500F53EBB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA2A3BF0FEB360500F53EBB /* CoreData.framework */; };
 		CAC72C6F0FEBD3EC00475578 /* AuthorizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC72C6E0FEBD3EC00475578 /* AuthorizeViewController.m */; };
 		CAC72D270FEBE82B00475578 /* RtmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC72D260FEBE82B00475578 /* RtmController.m */; };
+		CAD4868A0FF3AF2C00ACAE06 /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD486890FF3AF2C00ACAE06 /* ListView.xib */; };
+		CAD486C40FF3B41000ACAE06 /* ListDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD486C30FF3B41000ACAE06 /* ListDetailView.xib */; };
+		CAD486C80FF3B44600ACAE06 /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD486C70FF3B44600ACAE06 /* ListDetailViewController.m */; };
 		CAD738450FEB373000DE44E5 /* RTM.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = CAD738440FEB373000DE44E5 /* RTM.xcdatamodel */; };
 		CAD7384E0FEB376E00DE44E5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD7384A0FEB376E00DE44E5 /* Task.m */; };
 		CAD7384F0FEB376E00DE44E5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD7384C0FEB376E00DE44E5 /* Note.m */; };
@@ -41,7 +43,6 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28216C950DB411BC00E5133A /* OverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverViewController.h; sourceTree = "<group>"; };
 		28216C960DB411BC00E5133A /* OverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverViewController.m; sourceTree = "<group>"; };
-		282CCBFD0DB6C98000C4EA27 /* ListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ListView.xib; path = ../ListView.xib; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* rtm_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rtm_Prefix.pch; sourceTree = "<group>"; };
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -54,6 +55,10 @@
 		CAC72C6E0FEBD3EC00475578 /* AuthorizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthorizeViewController.m; path = ../AuthorizeViewController.m; sourceTree = "<group>"; };
 		CAC72D250FEBE82B00475578 /* RtmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtmController.h; sourceTree = "<group>"; };
 		CAC72D260FEBE82B00475578 /* RtmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RtmController.m; sourceTree = "<group>"; };
+		CAD486890FF3AF2C00ACAE06 /* ListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
+		CAD486C30FF3B41000ACAE06 /* ListDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDetailView.xib; sourceTree = "<group>"; };
+		CAD486C60FF3B44600ACAE06 /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewController.h; sourceTree = "<group>"; };
+		CAD486C70FF3B44600ACAE06 /* ListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewController.m; sourceTree = "<group>"; };
 		CAD738440FEB373000DE44E5 /* RTM.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = RTM.xcdatamodel; sourceTree = "<group>"; };
 		CAD738490FEB376E00DE44E5 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		CAD7384A0FEB376E00DE44E5 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
@@ -235,9 +240,12 @@
 		CAEE350B0FEB381B00E568E3 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				282CCBFD0DB6C98000C4EA27 /* ListView.xib */,
+				CAD486890FF3AF2C00ACAE06 /* ListView.xib */,
 				CAEE350E0FEB382900E568E3 /* ListViewController.h */,
 				CAEE350D0FEB382900E568E3 /* ListViewController.m */,
+				CAD486C30FF3B41000ACAE06 /* ListDetailView.xib */,
+				CAD486C60FF3B44600ACAE06 /* ListDetailViewController.h */,
+				CAD486C70FF3B44600ACAE06 /* ListDetailViewController.m */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -285,11 +293,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
-				282CCBFE0DB6C98000C4EA27 /* ListView.xib in Resources */,
 				CAEE35180FEB9BB800E568E3 /* MenuView.xib in Resources */,
 				CAEE351A0FEB9BC200E568E3 /* AuthorizeView.xib in Resources */,
 				CAD851AD0FF279050064E5F6 /* SearchView.xib in Resources */,
 				CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */,
+				CAD4868A0FF3AF2C00ACAE06 /* ListView.xib in Resources */,
+				CAD486C40FF3B41000ACAE06 /* ListDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +323,7 @@
 				CAD851EB0FF2854D0064E5F6 /* RtmListParser.m in Sources */,
 				CAD853420FF320D50064E5F6 /* TagViewController.m in Sources */,
 				CA0AAAC20FF3A2F400789C8C /* TaskList.m in Sources */,
+				CAD486C80FF3B44600ACAE06 /* ListDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

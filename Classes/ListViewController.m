@@ -30,8 +30,6 @@
 					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
 }
 
-
-
 /** This method is called when TaskList in CoreData is updated */
 -(void)updateListArray
 {
@@ -47,14 +45,6 @@
 	[listArray sortUsingSelector:@selector(compare:)];
 	[myTableView reloadData];
 }
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-	[super viewDidLoad];
-}
-*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -72,6 +62,22 @@
 	cellDefault.detailTextLabel.text = @"tags here!";
 	return cellDefault;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	ListDetailViewController *listDetailViewController =
+		[[ListDetailViewController alloc] initWithNibName:@"ListDetailView" bundle:nil];
+	[self.navigationController pushViewController:listDetailViewController animated:YES];
+	[listDetailViewController release];
+}
+
+
+/*
+ // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+ - (void)viewDidLoad
+ {
+ [super viewDidLoad];
+ }
+ */
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
