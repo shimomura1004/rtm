@@ -20,6 +20,7 @@
 	 selector:@selector(updateListArray) name:@"DidTaskListUpdated" object:nil];
 	
 	listArray = [[NSMutableArray alloc] init];
+	[self updateListArray];
 }
 
 -(IBAction)refreshAllListsAndTasks:sender
@@ -29,10 +30,11 @@
 					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
 }
 
+
+
 /** This method is called when TaskList in CoreData is updated */
 -(void)updateListArray
 {
-	NSLog(@"updating TaskList-array");
 	[listArray removeAllObjects];
 	
 	NSManagedObjectContext *context = [self managedObjectContext];
@@ -40,9 +42,9 @@
 	[req setEntity:[NSEntityDescription entityForName:@"TaskList" inManagedObjectContext:context]];
 	for (TaskList *list in [context executeFetchRequest:req error:nil])
 	{
-		NSLog(@"GETTING: %@", [list listName]);
 		[listArray addObject:[NSString stringWithString:[list listName]]];
 	}
+	[listArray sortUsingSelector:@selector(compare:)];
 	[myTableView reloadData];
 }
 
@@ -56,7 +58,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	NSLog(@"NUM: %d", listArray.count);
 	return listArray.count;
 }
 
@@ -64,10 +65,11 @@
 {
 	UITableViewCell *cellDefault = [tableView dequeueReusableCellWithIdentifier:@"cellDefault"];
 	if (cellDefault == nil) {
-		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellDefault"] autorelease];
+		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellDefault"] autorelease];
 	}
 	
 	cellDefault.textLabel.text = [listArray objectAtIndex:indexPath.row];
+	cellDefault.detailTextLabel.text = @"tags here!";
 	return cellDefault;
 }
 

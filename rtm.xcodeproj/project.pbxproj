@@ -22,7 +22,6 @@
 		CAD7384E0FEB376E00DE44E5 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD7384A0FEB376E00DE44E5 /* Task.m */; };
 		CAD7384F0FEB376E00DE44E5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD7384C0FEB376E00DE44E5 /* Note.m */; };
 		CAD738540FEB37AE00DE44E5 /* AuthParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD738530FEB37AE00DE44E5 /* AuthParser.m */; };
-		CAD766790FEC846900FA0909 /* sabo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CAD766780FEC846900FA0909 /* sabo.jpeg */; };
 		CAD851AD0FF279050064E5F6 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD851AC0FF279050064E5F6 /* SearchView.xib */; };
 		CAD851BE0FF27A720064E5F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD851BD0FF27A720064E5F6 /* SearchViewController.m */; };
 		CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD851CE0FF280870064E5F6 /* TagView.xib */; };
@@ -289,7 +288,6 @@
 				282CCBFE0DB6C98000C4EA27 /* ListView.xib in Resources */,
 				CAEE35180FEB9BB800E568E3 /* MenuView.xib in Resources */,
 				CAEE351A0FEB9BC200E568E3 /* AuthorizeView.xib in Resources */,
-				CAD766790FEC846900FA0909 /* sabo.jpeg in Resources */,
 				CAD851AD0FF279050064E5F6 /* SearchView.xib in Resources */,
 				CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */,
 			);
