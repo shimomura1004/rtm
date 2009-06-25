@@ -2,21 +2,25 @@
 //  Task.m
 //  rtm
 //
-//  Created by 下村 翔 on 6/19/09.
+//  Created by 下村 翔 on 6/26/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
 #import "Task.h"
 
-#import "Note.h"
-#import "TaskList.h"
+#import "TaskSeries.h"
 
 @implementation Task 
 
-@dynamic taskName;
+@dynamic deleted;
+@dynamic estimate;
+@dynamic postponed;
+@dynamic due;
+@dynamic completed;
+@dynamic added;
 @dynamic priority;
+@dynamic hasDueTime;
 @dynamic taskId;
-@dynamic notes;
-@dynamic list;
+@dynamic taskseries;
 
 @end

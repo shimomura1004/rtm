@@ -40,7 +40,7 @@
 	[req setEntity:[NSEntityDescription entityForName:@"TaskList" inManagedObjectContext:context]];
 	for (TaskList *list in [context executeFetchRequest:req error:nil])
 	{
-		[listArray addObject:[NSString stringWithString:[list listName]]];
+		[listArray addObject:[NSString stringWithString:[list name]]];
 	}
 	[listArray sortUsingSelector:@selector(compare:)];
 	[myTableView reloadData];

@@ -2,17 +2,21 @@
 //  Note.m
 //  rtm
 //
-//  Created by 下村 翔 on 6/19/09.
+//  Created by 下村 翔 on 6/26/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
 #import "Note.h"
 
-#import "Task.h"
+#import "TaskSeries.h"
 
 @implementation Note 
 
-@dynamic contents;
-@dynamic task;
+@dynamic noteId;
+@dynamic created;
+@dynamic title;
+@dynamic modified;
+@dynamic body;
+@dynamic taskseries;
 
 @end

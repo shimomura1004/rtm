@@ -43,7 +43,7 @@ TaskList *newlistEntity;
 						 insertNewObjectForEntityForName:@"TaskList"
 						 inManagedObjectContext:[self managedObjectContext]];
 		newlistEntity.listId = [attributeDict objectForKey:@"id"];
-		newlistEntity.listName = [attributeDict objectForKey:@"name"];
+		newlistEntity.name = [attributeDict objectForKey:@"name"];
 	}
 }
 

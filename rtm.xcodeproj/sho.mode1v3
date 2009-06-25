@@ -269,7 +269,6 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>CAD766760FEC844C00FA0909</string>
-								<string>CAA2A36B0FEB33D600F53EBB</string>
 								<string>CAC72D240FEBE7FA00475578</string>
 								<string>CAA2A36C0FEB33DB00F53EBB</string>
 								<string>CAC72E010FEBFF6600475578</string>
@@ -282,13 +281,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>46</integer>
-									<integer>45</integer>
+									<integer>23</integer>
+									<integer>20</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 210}, {186, 664}}</string>
+							<string>{{0, 0}, {186, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -325,7 +325,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ListViewController.h</string>
+								<string>ListViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -333,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ListViewController.h</string>
+										<string>ListViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CAD487310FF3BE6B00ACAE06</string>
+										<string>CAE2144A0FF3DD4300AD87E1</string>
 										<key>history</key>
 										<array>
 											<string>CAD766360FEC821500FA0909</string>
@@ -348,8 +348,6 @@
 											<string>CAD853450FF321090064E5F6</string>
 											<string>CA39132A0FF3522A008CDB28</string>
 											<string>CA0AAAB80FF3A24000789C8C</string>
-											<string>CA0AAACA0FF3A33800789C8C</string>
-											<string>CA0AAACB0FF3A33800789C8C</string>
 											<string>CA0AAACC0FF3A33800789C8C</string>
 											<string>CA0AAACF0FF3A33800789C8C</string>
 											<string>CAD486C90FF3B45400ACAE06</string>
@@ -358,13 +356,16 @@
 											<string>CAD486F70FF3BC8700ACAE06</string>
 											<string>CAD486F80FF3BC8700ACAE06</string>
 											<string>CAD486F90FF3BC8700ACAE06</string>
-											<string>CAD486FA0FF3BC8700ACAE06</string>
 											<string>CAD486FB0FF3BC8700ACAE06</string>
 											<string>CAD486FC0FF3BC8700ACAE06</string>
 											<string>CAD486FD0FF3BC8700ACAE06</string>
 											<string>CAD486FE0FF3BC8700ACAE06</string>
-											<string>CAD487250FF3BCB600ACAE06</string>
-											<string>CAD486F40FF3BC8700ACAE06</string>
+											<string>CA335BEC0FF3D3A600FF9E22</string>
+											<string>CA335C300FF3DC9400FF9E22</string>
+											<string>CA335C310FF3DC9400FF9E22</string>
+											<string>CA335C320FF3DC9400FF9E22</string>
+											<string>CAE214470FF3DD4300AD87E1</string>
+											<string>CAE214480FF3DD4300AD87E1</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -385,71 +386,15 @@
 											<string>CAD851D40FF2808B0064E5F6</string>
 											<string>CAD852290FF28D110064E5F6</string>
 											<string>CAD8523D0FF28D110064E5F6</string>
-											<string>CAD8529F0FF28E320064E5F6</string>
 											<string>CAD852CA0FF319820064E5F6</string>
 											<string>CAD853360FF3201C0064E5F6</string>
 											<string>CAD853490FF321090064E5F6</string>
 											<string>CA0AAABA0FF3A24000789C8C</string>
-											<string>CAD4869B0FF3B1FB00ACAE06</string>
-											<string>CAD4869C0FF3B1FB00ACAE06</string>
-											<string>CAD4869D0FF3B1FB00ACAE06</string>
-											<string>CAD4869E0FF3B1FB00ACAE06</string>
-											<string>CAD4869F0FF3B1FB00ACAE06</string>
-											<string>CAD486B30FF3B33100ACAE06</string>
-											<string>CAD486B40FF3B33100ACAE06</string>
-											<string>CAD486B50FF3B33100ACAE06</string>
-											<string>CAD486B60FF3B33100ACAE06</string>
-											<string>CAD486B70FF3B33100ACAE06</string>
-											<string>CAD486B80FF3B33100ACAE06</string>
-											<string>CAD486B90FF3B33100ACAE06</string>
-											<string>CAD486C00FF3B37000ACAE06</string>
-											<string>CAD486C10FF3B37000ACAE06</string>
-											<string>CAD486CD0FF3B45400ACAE06</string>
-											<string>CAD486CE0FF3B45400ACAE06</string>
-											<string>CAD486CF0FF3B45400ACAE06</string>
-											<string>CAD486D00FF3B45400ACAE06</string>
-											<string>CAD486D10FF3B45400ACAE06</string>
 											<string>CAD486D20FF3B45400ACAE06</string>
-											<string>CAD486D30FF3B45400ACAE06</string>
-											<string>CAD486D80FF3B49A00ACAE06</string>
-											<string>CAD486DD0FF3B4C100ACAE06</string>
-											<string>CAD486DE0FF3B4C100ACAE06</string>
-											<string>CAD487000FF3BC8700ACAE06</string>
-											<string>CAD487010FF3BC8700ACAE06</string>
 											<string>CAD487020FF3BC8700ACAE06</string>
-											<string>CAD487030FF3BC8700ACAE06</string>
-											<string>CAD487040FF3BC8700ACAE06</string>
-											<string>CAD487050FF3BC8700ACAE06</string>
-											<string>CAD487060FF3BC8700ACAE06</string>
-											<string>CAD487070FF3BC8700ACAE06</string>
-											<string>CAD487080FF3BC8700ACAE06</string>
-											<string>CAD487090FF3BC8700ACAE06</string>
-											<string>CAD4870A0FF3BC8700ACAE06</string>
-											<string>CAD4870B0FF3BC8700ACAE06</string>
-											<string>CAD4870C0FF3BC8700ACAE06</string>
-											<string>CAD4870D0FF3BC8700ACAE06</string>
-											<string>CAD4870E0FF3BC8700ACAE06</string>
-											<string>CAD4870F0FF3BC8700ACAE06</string>
-											<string>CAD487100FF3BC8700ACAE06</string>
-											<string>CAD487110FF3BC8700ACAE06</string>
-											<string>CAD487120FF3BC8700ACAE06</string>
-											<string>CAD487130FF3BC8700ACAE06</string>
-											<string>CAD487140FF3BC8700ACAE06</string>
-											<string>CAD487150FF3BC8700ACAE06</string>
-											<string>CAD487160FF3BC8700ACAE06</string>
-											<string>CAD487170FF3BC8700ACAE06</string>
-											<string>CAD487180FF3BC8700ACAE06</string>
-											<string>CAD487190FF3BC8700ACAE06</string>
-											<string>CAD4871A0FF3BC8700ACAE06</string>
-											<string>CAD4871B0FF3BC8700ACAE06</string>
-											<string>CAD4871C0FF3BC8700ACAE06</string>
-											<string>CAD4871D0FF3BC8700ACAE06</string>
-											<string>CAD4871E0FF3BC8700ACAE06</string>
-											<string>CAD4871F0FF3BC8700ACAE06</string>
-											<string>CAD487200FF3BC8700ACAE06</string>
-											<string>CAD487210FF3BC8700ACAE06</string>
-											<string>CAD487220FF3BC8700ACAE06</string>
-											<string>CAD487260FF3BCB600ACAE06</string>
+											<string>CA335C340FF3DC9400FF9E22</string>
+											<string>CA335C350FF3DC9400FF9E22</string>
+											<string>CAE214490FF3DD4300AD87E1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -507,9 +452,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CAD486810FF3AE0E00ACAE06</string>
+				<string>CAE214310FF3DCF100AD87E1</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>CAD486820FF3AE0E00ACAE06</string>
+				<string>CAE214320FF3DCF100AD87E1</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -643,8 +588,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CAD486A90FF3B1FB00ACAE06</string>
-		<string>CAD486AA0FF3B1FB00ACAE06</string>
+		<string>CAE2144B0FF3DD4300AD87E1</string>
+		<string>CAE2144C0FF3DD4300AD87E1</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>CAA2A3800FEB35CF00F53EBB</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -728,7 +673,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>CAA2A3800FEB35CF00F53EBB</string>
-				<string>CAD486A10FF3B1FB00ACAE06</string>
+				<string>CAE214330FF3DCF100AD87E1</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -848,13 +793,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>CAD486A20FF3B1FB00ACAE06</string>
+				<string>CAE214340FF3DCF100AD87E1</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>CAD486A30FF3B1FB00ACAE06</string>
-				<string>CAD486A40FF3B1FB00ACAE06</string>
-				<string>CAD486A50FF3B1FB00ACAE06</string>
-				<string>CAD486A60FF3B1FB00ACAE06</string>
-				<string>CAD486A70FF3B1FB00ACAE06</string>
+				<string>CAE214350FF3DCF100AD87E1</string>
+				<string>CAE214360FF3DCF100AD87E1</string>
+				<string>CAE214370FF3DCF100AD87E1</string>
+				<string>CAE214380FF3DCF100AD87E1</string>
+				<string>CAE214390FF3DCF100AD87E1</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1018,7 +963,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>CAD486A80FF3B1FB00ACAE06</string>
+				<string>CAE2143A0FF3DCF100AD87E1</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -1028,7 +973,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
