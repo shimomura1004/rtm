@@ -13,6 +13,7 @@
 @implementation TaskList 
 
 @dynamic listName;
+@dynamic listId;
 @dynamic tasks;
 
 @end

@@ -15,6 +15,7 @@
 }
 
 @property (nonatomic, retain) NSString * listName;
+@property (nonatomic, retain) NSString * listId;
 @property (nonatomic, retain) NSSet* tasks;
 
 @end

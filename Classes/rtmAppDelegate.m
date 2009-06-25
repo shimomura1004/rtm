@@ -112,6 +112,12 @@
 	 For the sake of illustration, provide a pre-populated default store.
 	 */
 	NSFileManager *fileManager = [NSFileManager defaultManager];
+	
+	
+		// delete CoreData storefile (for test)
+		[fileManager removeItemAtPath:storePath error:nil];
+	
+	
 	// If the expected store doesn't exist, copy the default store.
 	if (![fileManager fileExistsAtPath:storePath]) {
 		NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"RTM" ofType:@"sqlite"];

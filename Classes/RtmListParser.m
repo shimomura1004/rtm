@@ -42,8 +42,8 @@ TaskList *newlistEntity;
 		newlistEntity = [NSEntityDescription
 						 insertNewObjectForEntityForName:@"TaskList"
 						 inManagedObjectContext:[self managedObjectContext]];
+		newlistEntity.listId = [attributeDict objectForKey:@"id"];
 		newlistEntity.listName = [attributeDict objectForKey:@"name"];
-		NSLog(@"NAME: %@", newlistEntity.listName);
 	}
 }
 
