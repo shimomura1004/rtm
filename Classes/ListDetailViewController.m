@@ -13,7 +13,10 @@
 
 @synthesize navigationBar;
 
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 0;
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

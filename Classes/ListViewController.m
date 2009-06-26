@@ -55,18 +55,21 @@
 {
 	UITableViewCell *cellDefault = [tableView dequeueReusableCellWithIdentifier:@"cellDefault"];
 	if (cellDefault == nil) {
-		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+//		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
 											  reuseIdentifier:@"cellDefault"] autorelease];
 	}
 	
 	cellDefault.textLabel.text = [listArray objectAtIndex:indexPath.row];
-	cellDefault.detailTextLabel.text = @"tags here!";
+//	cellDefault.detailTextLabel.text = @"tags here!";
+	cellDefault.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	return cellDefault;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	ListDetailViewController *listDetailViewController =
 		[[ListDetailViewController alloc] initWithNibName:@"ListDetailView" bundle:nil];
+	[listDetailViewController setTitle:[listArray objectAtIndex:indexPath.row]];
 	[self.navigationController pushViewController:listDetailViewController animated:YES];
 	[listDetailViewController release];
 }

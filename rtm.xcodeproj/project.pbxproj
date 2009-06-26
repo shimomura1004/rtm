@@ -49,7 +49,7 @@
 		28216C960DB411BC00E5133A /* OverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverViewController.m; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* rtm_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rtm_Prefix.pch; sourceTree = "<group>"; };
-		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* rtm-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rtm-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		CA335C000FF3DC4F00FF9E22 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		CAD853410FF320D50064E5F6 /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
 		CAEE350D0FEB382900E568E3 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		CAEE350E0FEB382900E568E3 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		CAEE35170FEB9BB800E568E3 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MenuView.xib; path = ../MenuView.xib; sourceTree = "<group>"; };
+		CAEE35170FEB9BB800E568E3 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		CAEE35190FEB9BC200E568E3 /* AuthorizeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AuthorizeView.xib; path = ../AuthorizeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +157,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
+				CAEE35170FEB9BB800E568E3 /* MenuView.xib */,
 				8D1107310486CEB800E47090 /* rtm-Info.plist */,
 			);
 			name = Resources;
@@ -222,7 +222,7 @@
 		CAC72E010FEBFF6600475578 /* Overview */ = {
 			isa = PBXGroup;
 			children = (
-				CAEE35170FEB9BB800E568E3 /* MenuView.xib */,
+				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				28216C950DB411BC00E5133A /* OverViewController.h */,
 				28216C960DB411BC00E5133A /* OverViewController.m */,
 			);

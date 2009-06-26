@@ -281,14 +281,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
-									<integer>20</integer>
+									<integer>36</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 664}}</string>
+							<string>{{0, 105}, {186, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -325,7 +324,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ListViewController.m</string>
+								<string>rtmAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -333,11 +332,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ListViewController.m</string>
+										<string>rtmAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CAE2144A0FF3DD4300AD87E1</string>
+										<string>CA1C515C0FF471CE004D1435</string>
 										<key>history</key>
 										<array>
 											<string>CAD766360FEC821500FA0909</string>
@@ -350,22 +349,22 @@
 											<string>CA0AAAB80FF3A24000789C8C</string>
 											<string>CA0AAACC0FF3A33800789C8C</string>
 											<string>CA0AAACF0FF3A33800789C8C</string>
-											<string>CAD486C90FF3B45400ACAE06</string>
-											<string>CAD486F50FF3BC8700ACAE06</string>
-											<string>CAD486F60FF3BC8700ACAE06</string>
 											<string>CAD486F70FF3BC8700ACAE06</string>
 											<string>CAD486F80FF3BC8700ACAE06</string>
 											<string>CAD486F90FF3BC8700ACAE06</string>
 											<string>CAD486FB0FF3BC8700ACAE06</string>
 											<string>CAD486FC0FF3BC8700ACAE06</string>
-											<string>CAD486FD0FF3BC8700ACAE06</string>
 											<string>CAD486FE0FF3BC8700ACAE06</string>
 											<string>CA335BEC0FF3D3A600FF9E22</string>
 											<string>CA335C300FF3DC9400FF9E22</string>
 											<string>CA335C310FF3DC9400FF9E22</string>
 											<string>CA335C320FF3DC9400FF9E22</string>
 											<string>CAE214470FF3DD4300AD87E1</string>
-											<string>CAE214480FF3DD4300AD87E1</string>
+											<string>CA1C51190FF46C23004D1435</string>
+											<string>CA1C51310FF46D0E004D1435</string>
+											<string>CA1C514C0FF470EB004D1435</string>
+											<string>CA1C51560FF47119004D1435</string>
+											<string>CA1C51570FF47119004D1435</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -394,7 +393,15 @@
 											<string>CAD487020FF3BC8700ACAE06</string>
 											<string>CA335C340FF3DC9400FF9E22</string>
 											<string>CA335C350FF3DC9400FF9E22</string>
-											<string>CAE214490FF3DD4300AD87E1</string>
+											<string>CA1C511D0FF46C23004D1435</string>
+											<string>CA1C511E0FF46C23004D1435</string>
+											<string>CA1C511F0FF46C23004D1435</string>
+											<string>CA1C51200FF46C23004D1435</string>
+											<string>CA1C51330FF46D0E004D1435</string>
+											<string>CA1C514E0FF470EB004D1435</string>
+											<string>CA1C514F0FF470EB004D1435</string>
+											<string>CA1C51500FF470EB004D1435</string>
+											<string>CA1C51580FF47119004D1435</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -452,9 +459,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CAE214310FF3DCF100AD87E1</string>
+				<string>CA1C51220FF46C23004D1435</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>CAE214320FF3DCF100AD87E1</string>
+				<string>CA1C51230FF46C23004D1435</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -588,10 +595,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CAE2144B0FF3DD4300AD87E1</string>
-		<string>CAE2144C0FF3DD4300AD87E1</string>
-		<string>1CD10A99069EF8BA00B06720</string>
+		<string>CA1C51520FF470EB004D1435</string>
+		<string>CA1C51530FF470EB004D1435</string>
 		<string>CAA2A3800FEB35CF00F53EBB</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/sho/Documents/XCode/rtm/rtm.xcodeproj</string>
 	</array>
@@ -673,7 +680,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>CAA2A3800FEB35CF00F53EBB</string>
-				<string>CAE214330FF3DCF100AD87E1</string>
+				<string>CA1C51240FF46C23004D1435</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -793,13 +800,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>CAE214340FF3DCF100AD87E1</string>
+				<string>CA1C51250FF46C23004D1435</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>CAE214350FF3DCF100AD87E1</string>
-				<string>CAE214360FF3DCF100AD87E1</string>
-				<string>CAE214370FF3DCF100AD87E1</string>
-				<string>CAE214380FF3DCF100AD87E1</string>
-				<string>CAE214390FF3DCF100AD87E1</string>
+				<string>CA1C51260FF46C23004D1435</string>
+				<string>CA1C51270FF46C23004D1435</string>
+				<string>CA1C51280FF46C23004D1435</string>
+				<string>CA1C51290FF46C23004D1435</string>
+				<string>CA1C512A0FF46C23004D1435</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -963,7 +970,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>CAE2143A0FF3DCF100AD87E1</string>
+				<string>CA1C512B0FF46C23004D1435</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -973,7 +980,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

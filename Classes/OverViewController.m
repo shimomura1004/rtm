@@ -17,8 +17,32 @@
 					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 4;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    switch( section ) {
+        default: return 0;
+    }
+}
+
+- (NSString *) tableView:(UITableView *) tableView titleForHeaderInSection:(NSInteger) section
+{
+    switch( section ) {
+		case 0: return @"Today";
+        case 1: return @"Tomorrow";
+		case 2: return @"This week";
+		case 3: return @"OverDue";
+    }
+    return nil;
+}
+
+
 /*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
+ // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
