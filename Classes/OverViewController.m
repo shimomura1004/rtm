@@ -17,6 +17,13 @@
 					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
 }
 
+-(IBAction)addNewTask:sender
+{
+	TaskAddViewController *taskAddController =
+	[[TaskAddViewController alloc] initWithNibName:@"TaskAddView" bundle:nil];
+	[self.tabBarController presentModalViewController:taskAddController animated:YES];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 4;

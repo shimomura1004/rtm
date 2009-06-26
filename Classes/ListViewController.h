@@ -23,7 +23,6 @@
 @property (nonatomic, retain, readonly) NSArray *listArray;
 
 -(void)applicationDidFinishLaunching:(UIApplication *)application;
--(IBAction)refreshAllListsAndTasks:sender;
 -(void)updateListArray;
 
 @end

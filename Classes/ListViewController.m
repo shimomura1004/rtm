@@ -23,13 +23,6 @@
 	[self updateListArray];
 }
 
--(IBAction)refreshAllListsAndTasks:sender
-{
-	[[NSNotificationCenter defaultCenter]
-	 postNotification:[NSNotification
-					   notificationWithName:@"UpdateAllListsAndTasks" object:nil]];
-}
-
 /** This method is called when TaskList in CoreData is updated */
 -(void)updateListArray
 {

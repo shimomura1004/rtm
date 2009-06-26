@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TaskAddViewController.h"
 
 @interface OverViewController : UIViewController {
 
 }
 
 -(IBAction)refreshAllListsAndTasks:sender;
+-(IBAction)addNewTask:sender;
 
 @end

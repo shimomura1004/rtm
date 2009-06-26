@@ -115,7 +115,7 @@
 	
 	
 		// delete CoreData storefile (for test)
-		[fileManager removeItemAtPath:storePath error:nil];
+		//[fileManager removeItemAtPath:storePath error:nil];
 	
 	
 	// If the expected store doesn't exist, copy the default store.

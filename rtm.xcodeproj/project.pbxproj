@@ -34,6 +34,8 @@
 		CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD851CE0FF280870064E5F6 /* TagView.xib */; };
 		CAD851EB0FF2854D0064E5F6 /* RtmListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD851EA0FF2854D0064E5F6 /* RtmListParser.m */; };
 		CAD853420FF320D50064E5F6 /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD853410FF320D50064E5F6 /* TagViewController.m */; };
+		CADA288D0FF4A9E500C1BE6F /* TaskAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADA288C0FF4A9E500C1BE6F /* TaskAddView.xib */; };
+		CADA28900FF4A9F600C1BE6F /* TaskAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA288F0FF4A9F600C1BE6F /* TaskAddViewController.m */; };
 		CAEE350F0FEB382900E568E3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE350D0FEB382900E568E3 /* ListViewController.m */; };
 		CAEE35180FEB9BB800E568E3 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEE35170FEB9BB800E568E3 /* MenuView.xib */; };
 		CAEE351A0FEB9BC200E568E3 /* AuthorizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEE35190FEB9BC200E568E3 /* AuthorizeView.xib */; };
@@ -87,6 +89,9 @@
 		CAD851EA0FF2854D0064E5F6 /* RtmListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RtmListParser.m; sourceTree = "<group>"; };
 		CAD853400FF320D50064E5F6 /* TagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
 		CAD853410FF320D50064E5F6 /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
+		CADA288C0FF4A9E500C1BE6F /* TaskAddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskAddView.xib; sourceTree = "<group>"; };
+		CADA288E0FF4A9F600C1BE6F /* TaskAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskAddViewController.h; sourceTree = "<group>"; };
+		CADA288F0FF4A9F600C1BE6F /* TaskAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskAddViewController.m; sourceTree = "<group>"; };
 		CAEE350D0FEB382900E568E3 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		CAEE350E0FEB382900E568E3 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		CAEE35170FEB9BB800E568E3 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 			children = (
 				CAD766760FEC844C00FA0909 /* Images */,
 				CAA2A36B0FEB33D600F53EBB /* Model and Model Classes */,
+				CADA288B0FF4A98000C1BE6F /* TaskAdd */,
 				CAC72D240FEBE7FA00475578 /* RtmController */,
 				CAA2A36C0FEB33DB00F53EBB /* Authorize */,
 				CAC72E010FEBFF6600475578 /* Overview */,
@@ -257,6 +263,16 @@
 			name = Tag;
 			sourceTree = "<group>";
 		};
+		CADA288B0FF4A98000C1BE6F /* TaskAdd */ = {
+			isa = PBXGroup;
+			children = (
+				CADA288C0FF4A9E500C1BE6F /* TaskAddView.xib */,
+				CADA288E0FF4A9F600C1BE6F /* TaskAddViewController.h */,
+				CADA288F0FF4A9F600C1BE6F /* TaskAddViewController.m */,
+			);
+			name = TaskAdd;
+			sourceTree = "<group>";
+		};
 		CAEE350B0FEB381B00E568E3 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +335,7 @@
 				CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */,
 				CAD4868A0FF3AF2C00ACAE06 /* ListView.xib in Resources */,
 				CAD486C40FF3B41000ACAE06 /* ListDetailView.xib in Resources */,
+				CADA288D0FF4A9E500C1BE6F /* TaskAddView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +365,7 @@
 				CA335C120FF3DC4F00FF9E22 /* TaskList.m in Sources */,
 				CA335C130FF3DC4F00FF9E22 /* Task.m in Sources */,
 				CA335C140FF3DC4F00FF9E22 /* Note.m in Sources */,
+				CADA28900FF4A9F600C1BE6F /* TaskAddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

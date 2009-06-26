@@ -39,20 +39,6 @@
 					<object class="IBUITableView" id="483783705">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<object class="NSMutableArray" key="NSSubviews">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUISearchBar" id="48351690">
-								<reference key="NSNextResponder" ref="483783705"/>
-								<int key="NSvFlags">290</int>
-								<string key="NSFrameSize">{320, 44}</string>
-								<reference key="NSSuperview" ref="483783705"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<int key="IBUIContentMode">3</int>
-								<bool key="IBUIMultipleTouchEnabled">YES</bool>
-								<int key="IBBarStyle">1</int>
-								<object class="IBUITextInputTraits" key="IBTextInputTraits"/>
-							</object>
-						</object>
 						<string key="NSFrame">{{0, 44}, {320, 367}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -69,7 +55,6 @@
 						<float key="IBUIRowHeight">4.400000e+01</float>
 						<float key="IBUISectionHeaderHeight">2.200000e+01</float>
 						<float key="IBUISectionFooterHeight">2.200000e+01</float>
-						<reference key="IBUITableHeaderView" ref="48351690"/>
 					</object>
 					<object class="IBUINavigationBar" id="882831020">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -167,14 +152,8 @@
 						<reference key="object" ref="483783705"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="48351690"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">8</int>
-						<reference key="object" ref="48351690"/>
-						<reference key="parent" ref="483783705"/>
 					</object>
 				</object>
 			</object>
@@ -189,14 +168,12 @@
 					<string>3.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
-					<string>8.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>TagViewController</string>
 					<string>UIResponder</string>
 					<string>{{173, 276}, {320, 480}}</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
