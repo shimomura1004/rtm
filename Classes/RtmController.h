@@ -12,6 +12,7 @@
 #import "AuthorizeViewController.h"
 #import "AuthParser.h"
 #import "RtmListParser.h"
+#import "RtmTaskParser.h"
 
 #import "TaskList.h"
 #import "TaskSeries.h"

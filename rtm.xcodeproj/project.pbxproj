@@ -21,6 +21,7 @@
 		CA335C120FF3DC4F00FF9E22 /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C090FF3DC4F00FF9E22 /* TaskList.m */; };
 		CA335C130FF3DC4F00FF9E22 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C0B0FF3DC4F00FF9E22 /* Task.m */; };
 		CA335C140FF3DC4F00FF9E22 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C0D0FF3DC4F00FF9E22 /* Note.m */; };
+		CA6B6F1E0FFCE46E00DFBC33 /* RtmTaskParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6B6F1D0FFCE46E00DFBC33 /* RtmTaskParser.m */; };
 		CAA2A3C00FEB360500F53EBB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA2A3BF0FEB360500F53EBB /* CoreData.framework */; };
 		CAC72C6F0FEBD3EC00475578 /* AuthorizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC72C6E0FEBD3EC00475578 /* AuthorizeViewController.m */; };
 		CAC72D270FEBE82B00475578 /* RtmController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC72D260FEBE82B00475578 /* RtmController.m */; };
@@ -68,6 +69,8 @@
 		CA335C0B0FF3DC4F00FF9E22 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		CA335C0C0FF3DC4F00FF9E22 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		CA335C0D0FF3DC4F00FF9E22 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		CA6B6F1C0FFCE46E00DFBC33 /* RtmTaskParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtmTaskParser.h; sourceTree = "<group>"; };
+		CA6B6F1D0FFCE46E00DFBC33 /* RtmTaskParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RtmTaskParser.m; sourceTree = "<group>"; };
 		CAA2A3BF0FEB360500F53EBB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CAC72C6D0FEBD3EC00475578 /* AuthorizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthorizeViewController.h; path = ../AuthorizeViewController.h; sourceTree = "<group>"; };
 		CAC72C6E0FEBD3EC00475578 /* AuthorizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthorizeViewController.m; path = ../AuthorizeViewController.m; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				CAC72D260FEBE82B00475578 /* RtmController.m */,
 				CAD851E90FF2854D0064E5F6 /* RtmListParser.h */,
 				CAD851EA0FF2854D0064E5F6 /* RtmListParser.m */,
+				CA6B6F1C0FFCE46E00DFBC33 /* RtmTaskParser.h */,
+				CA6B6F1D0FFCE46E00DFBC33 /* RtmTaskParser.m */,
 			);
 			name = RtmController;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				CA335C130FF3DC4F00FF9E22 /* Task.m in Sources */,
 				CA335C140FF3DC4F00FF9E22 /* Note.m in Sources */,
 				CADA28900FF4A9F600C1BE6F /* TaskAddViewController.m in Sources */,
+				CA6B6F1E0FFCE46E00DFBC33 /* RtmTaskParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

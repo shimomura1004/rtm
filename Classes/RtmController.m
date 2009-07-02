@@ -161,13 +161,41 @@ static RtmController *rtmController;
 					   notificationWithName:@"DidTaskListUpdated" object:nil]];
 }
 
--(void) updateTasks:(NSString *)taskListName
+-(void) updateTasks:(TaskList *)taskList
 {
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
+	[params setObject:apiKey forKey:@"api_key"];
+	[params setObject:[taskList listId] forKey:@"list_id"];
+	[params setObject:@"rtm.tasks.getList" forKey:@"method"];
+	[params setObject:token forKey:@"auth_token"];
+	NSString *requestURL = [@"http://api.rememberthemilk.com/services/rest/?"
+							stringByAppendingString:[self createRtmQuery:params]];
+	NSXMLParser *parser = [[NSXMLParser alloc]
+						   initWithContentsOfURL:[NSURL URLWithString:requestURL]];
+	RtmTaskParser *taskParser = [[RtmTaskParser alloc] init];
+	[taskParser setManagedObjectContext:[self managedObjectContext]];
+	[taskParser setTaskList:taskList];
+	[parser setDelegate:taskParser];
+	[parser parse];
+	
+	NSLog(@"Complete: update all tasks(%@)", [taskList name]);
+	// update model of tasks and of tags
 }
 
 -(void) updateAllTasks
 {
-	// for each (taskListName in TasksList) [self updateTasks:taskListName];
+	NSManagedObjectContext *context = [self managedObjectContext];
+	NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	[req setEntity:[NSEntityDescription entityForName:@"TaskList" inManagedObjectContext:context]];
+	for (TaskList *taskList in [context executeFetchRequest:req error:nil])
+	{
+		NSLog(@"GETTING: %@", [taskList name]);
+		// do not get task if list is 'All Tasks'
+		if (![[taskList name] isEqualToString:@"All Tasks"])
+		{
+			[self updateTasks:taskList];
+		}
+	}
 	NSLog(@"Complete: update all tasks");
 }
 
