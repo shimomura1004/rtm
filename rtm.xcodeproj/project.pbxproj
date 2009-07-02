@@ -37,7 +37,7 @@
 		CADA288D0FF4A9E500C1BE6F /* TaskAddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADA288C0FF4A9E500C1BE6F /* TaskAddView.xib */; };
 		CADA28900FF4A9F600C1BE6F /* TaskAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA288F0FF4A9F600C1BE6F /* TaskAddViewController.m */; };
 		CAEE350F0FEB382900E568E3 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE350D0FEB382900E568E3 /* ListViewController.m */; };
-		CAEE35180FEB9BB800E568E3 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEE35170FEB9BB800E568E3 /* MenuView.xib */; };
+		CAEE35180FEB9BB800E568E3 /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEE35170FEB9BB800E568E3 /* SettingView.xib */; };
 		CAEE351A0FEB9BC200E568E3 /* AuthorizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEE35190FEB9BC200E568E3 /* AuthorizeView.xib */; };
 /* End PBXBuildFile section */
 
@@ -94,7 +94,7 @@
 		CADA288F0FF4A9F600C1BE6F /* TaskAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskAddViewController.m; sourceTree = "<group>"; };
 		CAEE350D0FEB382900E568E3 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		CAEE350E0FEB382900E568E3 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		CAEE35170FEB9BB800E568E3 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		CAEE35170FEB9BB800E568E3 /* SettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
 		CAEE35190FEB9BC200E568E3 /* AuthorizeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AuthorizeView.xib; path = ../AuthorizeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +163,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CAEE35170FEB9BB800E568E3 /* MenuView.xib */,
+				CAEE35170FEB9BB800E568E3 /* SettingView.xib */,
 				8D1107310486CEB800E47090 /* rtm-Info.plist */,
 			);
 			name = Resources;
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
-				CAEE35180FEB9BB800E568E3 /* MenuView.xib in Resources */,
+				CAEE35180FEB9BB800E568E3 /* SettingView.xib in Resources */,
 				CAEE351A0FEB9BC200E568E3 /* AuthorizeView.xib in Resources */,
 				CAD851AD0FF279050064E5F6 /* SearchView.xib in Resources */,
 				CAD851CF0FF280870064E5F6 /* TagView.xib in Resources */,

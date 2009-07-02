@@ -13,6 +13,10 @@
 #import "AuthParser.h"
 #import "RtmListParser.h"
 
+#import "TaskList.h"
+#import "TaskSeries.h"
+#import "Task.h"
+
 @interface RtmController : NSObject {
 	UITabBarController *tabBarController;
 	

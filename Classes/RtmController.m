@@ -173,26 +173,31 @@ static RtmController *rtmController;
 
 -(void) updateAllListsAndTasks
 {
-	// first, remove all lists and tasks
 	NSManagedObjectContext *context = [self managedObjectContext];
 	
-	//	NSLog(@"Delete all tasks");
-	//	self.statusText = @"Delete all tasks";
-	//	[statusField display];
-	//	NSFetchRequest *req = [[NSFetchRequest alloc] init];
-	//	[req setEntity:[NSEntityDescription entityForName:@"Task" inManagedObjectContext:context]];
-	//	for (Task *task in [context executeFetchRequest:req error:nil])
-	//	{
-	//		[context deleteObject:task];
-	//	}
+	NSLog(@"Delete all TaskSeries");
+		NSFetchRequest *req = [[NSFetchRequest alloc] init];
+		[req setEntity:[NSEntityDescription entityForName:@"TaskSeries" inManagedObjectContext:context]];
+		for (TaskSeries *taskSeries in [context executeFetchRequest:req error:nil])
+		{
+			[context deleteObject:taskSeries];
+		}
+		
+	NSLog(@"Delete all Tasks");
+		req = [[NSFetchRequest alloc] init];
+		[req setEntity:[NSEntityDescription entityForName:@"Task" inManagedObjectContext:context]];
+		for (Task *task in [context executeFetchRequest:req error:nil])
+		{
+			[context deleteObject:task];
+		}
 	
-	NSLog(@"Delete all Lists");
-	NSFetchRequest *req = [[NSFetchRequest alloc] init];
-	[req setEntity:[NSEntityDescription entityForName:@"TaskList" inManagedObjectContext:context]];
-	for (TaskList *list in [context executeFetchRequest:req error:nil])
-	{
-		[context deleteObject:list];
-	}
+	NSLog(@"Delete all TaskLists");
+		req = [[NSFetchRequest alloc] init];
+		[req setEntity:[NSEntityDescription entityForName:@"TaskList" inManagedObjectContext:context]];
+		for (TaskList *list in [context executeFetchRequest:req error:nil])
+		{
+			[context deleteObject:list];
+		}
 
 	
 	[self updateTaskList];

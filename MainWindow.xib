@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="149"/>
+			<integer value="106"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -50,55 +50,17 @@
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedNavigationBarMetrics" key="IBUISimulatedTopBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="366387951">
-					<string key="IBUITitle">ListView</string>
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="619422238">
-						<string key="IBUITitle">List</string>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="691051695">
+					<string key="IBUITitle">OptionView</string>
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="66641428">
+						<string key="IBUITitle">Setting</string>
 						<reference key="IBUITabBar"/>
 					</object>
 					<object class="NSArray" key="IBUIToolbarItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="1056824489">
-						<nil key="NSNextResponder"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrameSize">{320, 44}</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<int key="IBUIBarStyle">1</int>
-					</object>
-					<object class="IBUIToolbar" key="IBUIToolbar" id="146484430">
-						<nil key="NSNextResponder"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">4</int>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-					</object>
-					<object class="NSMutableArray" key="IBUIViewControllers">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="325521337">
-							<object class="NSArray" key="IBUIToolbarItems">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-							</object>
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="19396543">
-								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">List</string>
-								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="623230768">
-									<int key="IBUIStyle">1</int>
-									<int key="IBUISystemItemIdentifier">13</int>
-								</object>
-								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="385540567">
-									<int key="IBUIStyle">1</int>
-									<int key="IBUISystemItemIdentifier">4</int>
-								</object>
-							</object>
-							<reference key="IBUIParentViewController" ref="366387951"/>
-						</object>
-					</object>
+					<string key="IBUINibName">SettingView</string>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -170,7 +132,55 @@
 						</object>
 						<reference key="IBUIParentViewController" ref="1034742383"/>
 					</object>
-					<reference ref="366387951"/>
+					<object class="IBUINavigationController" id="366387951">
+						<string key="IBUITitle">ListView</string>
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="619422238">
+							<string key="IBUITitle">List</string>
+							<reference key="IBUITabBar"/>
+						</object>
+						<object class="NSArray" key="IBUIToolbarItems">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+						</object>
+						<reference key="IBUIParentViewController" ref="1034742383"/>
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="1056824489">
+							<nil key="NSNextResponder"/>
+							<int key="NSvFlags">256</int>
+							<string key="NSFrameSize">{320, 44}</string>
+							<bool key="IBUIOpaque">NO</bool>
+							<bool key="IBUIClipsSubviews">YES</bool>
+							<bool key="IBUIMultipleTouchEnabled">YES</bool>
+							<int key="IBUIBarStyle">1</int>
+						</object>
+						<object class="IBUIToolbar" key="IBUIToolbar" id="146484430">
+							<nil key="NSNextResponder"/>
+							<int key="NSvFlags">256</int>
+							<string key="NSFrame">{{0, 416}, {320, 44}}</string>
+							<bool key="IBUIOpaque">NO</bool>
+							<bool key="IBUIClipsSubviews">YES</bool>
+							<int key="IBUIContentMode">4</int>
+							<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						</object>
+						<object class="NSMutableArray" key="IBUIViewControllers">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIViewController" id="325521337">
+								<object class="NSArray" key="IBUIToolbarItems">
+									<bool key="EncodedWithXMLCoder">YES</bool>
+								</object>
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="19396543">
+									<string key="IBUITitle">List</string>
+									<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="623230768">
+										<int key="IBUIStyle">1</int>
+										<int key="IBUISystemItemIdentifier">13</int>
+									</object>
+									<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="385540567">
+										<int key="IBUIStyle">1</int>
+										<int key="IBUISystemItemIdentifier">4</int>
+									</object>
+								</object>
+								<reference key="IBUIParentViewController" ref="366387951"/>
+							</object>
+						</object>
+					</object>
 					<object class="IBUIViewController" id="311605154">
 						<string key="IBUITitle">TagView</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="597395097">
@@ -196,18 +206,7 @@
 						<reference key="IBUIParentViewController" ref="1034742383"/>
 						<string key="IBUINibName">SearchView</string>
 					</object>
-					<object class="IBUIViewController" id="691051695">
-						<string key="IBUITitle">OptionView</string>
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="66641428">
-							<string key="IBUITitle">Setting</string>
-							<reference key="IBUITabBar"/>
-						</object>
-						<object class="NSArray" key="IBUIToolbarItems">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
-						<reference key="IBUIParentViewController" ref="1034742383"/>
-						<string key="IBUINibName">MenuView</string>
-					</object>
+					<reference ref="691051695"/>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="795333663">
 					<nil key="NSNextResponder"/>
@@ -641,10 +640,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ListViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">refreshAllListsAndTasks:</string>
-						<string key="NS.object.0">id</string>
-					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">myTableView</string>
 						<string key="NS.object.0">UITableView</string>

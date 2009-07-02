@@ -42,7 +42,7 @@
 		case 0: return @"Today";
         case 1: return @"Tomorrow";
 		case 2: return @"This week";
-		case 3: return @"OverDue";
+		case 3: return @"Over Due";
     }
     return nil;
 }
