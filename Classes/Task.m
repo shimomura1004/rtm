@@ -2,7 +2,7 @@
 //  Task.m
 //  rtm
 //
-//  Created by 下村 翔 on 6/26/09.
+//  Created by 下村 翔 on 7/3/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,15 +12,15 @@
 
 @implementation Task 
 
-@dynamic deleted;
-@dynamic estimate;
+@dynamic priority;
+@dynamic hasDueTime;
+@dynamic taskId;
 @dynamic postponed;
 @dynamic due;
 @dynamic completed;
 @dynamic added;
-@dynamic priority;
-@dynamic hasDueTime;
-@dynamic taskId;
+@dynamic deleted;
+@dynamic estimate;
 @dynamic taskseries;
 
 @end

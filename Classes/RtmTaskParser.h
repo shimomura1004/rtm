@@ -12,6 +12,7 @@
 #import "TaskList.h"
 #import "Task.h"
 #import "Tag.h"
+#import "Note.h"
 
 @interface RtmTaskParser : NSObject {
 	NSManagedObjectContext *managedObjectContext;

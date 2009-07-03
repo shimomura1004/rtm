@@ -119,7 +119,7 @@ NSMutableArray *tags;
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
 	switch(status) {
-		case inTag:
+		case inTag:{
 			if (![tags containsObject:string]) {
 				Tag *newTag = [NSEntityDescription
 							  insertNewObjectForEntityForName:@"Tag"
@@ -129,13 +129,15 @@ NSMutableArray *tags;
 			}
 			// add tag to taskseries
 			break;
-		case inNote:
+		}
+		case inNote:{
 			Note *newNote = [NSEntityDescription
 							 insertNewObjectForEntityForName:@"Note"
 							 inManagedObjectContext:managedObjectContext];
 			newNote.body = string;
-			// add note to taskseries
 			break;
+			// add note to taskseries
+		}
 		default:
 			break;
 	}

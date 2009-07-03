@@ -14,13 +14,13 @@
 		28216C970DB411BC00E5133A /* OverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* OverViewController.m */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
-		CA335C0E0FF3DC4F00FF9E22 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C010FF3DC4F00FF9E22 /* Participant.m */; };
-		CA335C0F0FF3DC4F00FF9E22 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C030FF3DC4F00FF9E22 /* Location.m */; };
-		CA335C100FF3DC4F00FF9E22 /* TaskSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C050FF3DC4F00FF9E22 /* TaskSeries.m */; };
-		CA335C110FF3DC4F00FF9E22 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C070FF3DC4F00FF9E22 /* Tag.m */; };
-		CA335C120FF3DC4F00FF9E22 /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C090FF3DC4F00FF9E22 /* TaskList.m */; };
-		CA335C130FF3DC4F00FF9E22 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C0B0FF3DC4F00FF9E22 /* Task.m */; };
-		CA335C140FF3DC4F00FF9E22 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CA335C0D0FF3DC4F00FF9E22 /* Note.m */; };
+		CA3084F30FFDE84900A1A347 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084E60FFDE84900A1A347 /* Participant.m */; };
+		CA3084F40FFDE84900A1A347 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084E80FFDE84900A1A347 /* Location.m */; };
+		CA3084F50FFDE84900A1A347 /* TaskSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084EA0FFDE84900A1A347 /* TaskSeries.m */; };
+		CA3084F60FFDE84900A1A347 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084EC0FFDE84900A1A347 /* Tag.m */; };
+		CA3084F70FFDE84900A1A347 /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084EE0FFDE84900A1A347 /* TaskList.m */; };
+		CA3084F80FFDE84900A1A347 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084F00FFDE84900A1A347 /* Task.m */; };
+		CA3084F90FFDE84900A1A347 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084F20FFDE84900A1A347 /* Note.m */; };
 		CA6B6F1E0FFCE46E00DFBC33 /* RtmTaskParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6B6F1D0FFCE46E00DFBC33 /* RtmTaskParser.m */; };
 		CAA2A3C00FEB360500F53EBB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA2A3BF0FEB360500F53EBB /* CoreData.framework */; };
 		CAC72C6F0FEBD3EC00475578 /* AuthorizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC72C6E0FEBD3EC00475578 /* AuthorizeViewController.m */; };
@@ -55,20 +55,20 @@
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* rtm-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rtm-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		CA335C000FF3DC4F00FF9E22 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
-		CA335C010FF3DC4F00FF9E22 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
-		CA335C020FF3DC4F00FF9E22 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		CA335C030FF3DC4F00FF9E22 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		CA335C040FF3DC4F00FF9E22 /* TaskSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSeries.h; sourceTree = "<group>"; };
-		CA335C050FF3DC4F00FF9E22 /* TaskSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSeries.m; sourceTree = "<group>"; };
-		CA335C060FF3DC4F00FF9E22 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
-		CA335C070FF3DC4F00FF9E22 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
-		CA335C080FF3DC4F00FF9E22 /* TaskList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskList.h; sourceTree = "<group>"; };
-		CA335C090FF3DC4F00FF9E22 /* TaskList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskList.m; sourceTree = "<group>"; };
-		CA335C0A0FF3DC4F00FF9E22 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		CA335C0B0FF3DC4F00FF9E22 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
-		CA335C0C0FF3DC4F00FF9E22 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		CA335C0D0FF3DC4F00FF9E22 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		CA3084E50FFDE84900A1A347 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
+		CA3084E60FFDE84900A1A347 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
+		CA3084E70FFDE84900A1A347 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		CA3084E80FFDE84900A1A347 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		CA3084E90FFDE84900A1A347 /* TaskSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSeries.h; sourceTree = "<group>"; };
+		CA3084EA0FFDE84900A1A347 /* TaskSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSeries.m; sourceTree = "<group>"; };
+		CA3084EB0FFDE84900A1A347 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		CA3084EC0FFDE84900A1A347 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		CA3084ED0FFDE84900A1A347 /* TaskList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskList.h; sourceTree = "<group>"; };
+		CA3084EE0FFDE84900A1A347 /* TaskList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskList.m; sourceTree = "<group>"; };
+		CA3084EF0FFDE84900A1A347 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		CA3084F00FFDE84900A1A347 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		CA3084F10FFDE84900A1A347 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		CA3084F20FFDE84900A1A347 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		CA6B6F1C0FFCE46E00DFBC33 /* RtmTaskParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtmTaskParser.h; sourceTree = "<group>"; };
 		CA6B6F1D0FFCE46E00DFBC33 /* RtmTaskParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RtmTaskParser.m; sourceTree = "<group>"; };
 		CAA2A3BF0FEB360500F53EBB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -186,20 +186,20 @@
 		CAA2A36B0FEB33D600F53EBB /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CA335C000FF3DC4F00FF9E22 /* Participant.h */,
-				CA335C010FF3DC4F00FF9E22 /* Participant.m */,
-				CA335C020FF3DC4F00FF9E22 /* Location.h */,
-				CA335C030FF3DC4F00FF9E22 /* Location.m */,
-				CA335C040FF3DC4F00FF9E22 /* TaskSeries.h */,
-				CA335C050FF3DC4F00FF9E22 /* TaskSeries.m */,
-				CA335C060FF3DC4F00FF9E22 /* Tag.h */,
-				CA335C070FF3DC4F00FF9E22 /* Tag.m */,
-				CA335C080FF3DC4F00FF9E22 /* TaskList.h */,
-				CA335C090FF3DC4F00FF9E22 /* TaskList.m */,
-				CA335C0A0FF3DC4F00FF9E22 /* Task.h */,
-				CA335C0B0FF3DC4F00FF9E22 /* Task.m */,
-				CA335C0C0FF3DC4F00FF9E22 /* Note.h */,
-				CA335C0D0FF3DC4F00FF9E22 /* Note.m */,
+				CA3084E50FFDE84900A1A347 /* Participant.h */,
+				CA3084E60FFDE84900A1A347 /* Participant.m */,
+				CA3084E70FFDE84900A1A347 /* Location.h */,
+				CA3084E80FFDE84900A1A347 /* Location.m */,
+				CA3084E90FFDE84900A1A347 /* TaskSeries.h */,
+				CA3084EA0FFDE84900A1A347 /* TaskSeries.m */,
+				CA3084EB0FFDE84900A1A347 /* Tag.h */,
+				CA3084EC0FFDE84900A1A347 /* Tag.m */,
+				CA3084ED0FFDE84900A1A347 /* TaskList.h */,
+				CA3084EE0FFDE84900A1A347 /* TaskList.m */,
+				CA3084EF0FFDE84900A1A347 /* Task.h */,
+				CA3084F00FFDE84900A1A347 /* Task.m */,
+				CA3084F10FFDE84900A1A347 /* Note.h */,
+				CA3084F20FFDE84900A1A347 /* Note.m */,
 				CAD738440FEB373000DE44E5 /* RTM.xcdatamodel */,
 			);
 			name = "Model and Model Classes";
@@ -363,15 +363,15 @@
 				CAD851EB0FF2854D0064E5F6 /* RtmListParser.m in Sources */,
 				CAD853420FF320D50064E5F6 /* TagViewController.m in Sources */,
 				CAD486C80FF3B44600ACAE06 /* ListDetailViewController.m in Sources */,
-				CA335C0E0FF3DC4F00FF9E22 /* Participant.m in Sources */,
-				CA335C0F0FF3DC4F00FF9E22 /* Location.m in Sources */,
-				CA335C100FF3DC4F00FF9E22 /* TaskSeries.m in Sources */,
-				CA335C110FF3DC4F00FF9E22 /* Tag.m in Sources */,
-				CA335C120FF3DC4F00FF9E22 /* TaskList.m in Sources */,
-				CA335C130FF3DC4F00FF9E22 /* Task.m in Sources */,
-				CA335C140FF3DC4F00FF9E22 /* Note.m in Sources */,
 				CADA28900FF4A9F600C1BE6F /* TaskAddViewController.m in Sources */,
 				CA6B6F1E0FFCE46E00DFBC33 /* RtmTaskParser.m in Sources */,
+				CA3084F30FFDE84900A1A347 /* Participant.m in Sources */,
+				CA3084F40FFDE84900A1A347 /* Location.m in Sources */,
+				CA3084F50FFDE84900A1A347 /* TaskSeries.m in Sources */,
+				CA3084F60FFDE84900A1A347 /* Tag.m in Sources */,
+				CA3084F70FFDE84900A1A347 /* TaskList.m in Sources */,
+				CA3084F80FFDE84900A1A347 /* Task.m in Sources */,
+				CA3084F90FFDE84900A1A347 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
