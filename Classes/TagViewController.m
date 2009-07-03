@@ -11,6 +11,53 @@
 
 @implementation TagViewController
 
+@synthesize managedObjectContext, myTableView, tagArray;
+
+-(void)applicationDidFinishLaunching:(UIApplication *)application
+{
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:self
+	 selector:@selector(updateTagArray) name:@"DidTagListUpdated" object:nil];
+
+	tagArray = [[NSMutableArray alloc] init];
+	[self updateTagArray];
+}
+
+-(void)updateTagArray
+{
+	[tagArray removeAllObjects];
+	
+	NSManagedObjectContext *context = [self managedObjectContext];
+	NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	[req setEntity:[NSEntityDescription entityForName:@"Tag" inManagedObjectContext:context]];
+	for (Tag *tag in [context executeFetchRequest:req error:nil])
+	{
+		[tagArray addObject:[NSString stringWithString:[tag name]]];
+	}
+	[tagArray sortUsingSelector:@selector(compare:)];
+	[myTableView reloadData];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return tagArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cellDefault = [tableView dequeueReusableCellWithIdentifier:@"cellDefault"];
+	if (cellDefault == nil) {
+		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+											  reuseIdentifier:@"cellDefault"] autorelease];
+	}
+	
+	cellDefault.textLabel.text = [tagArray objectAtIndex:indexPath.row];
+	cellDefault.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	return cellDefault;
+}
+
+
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

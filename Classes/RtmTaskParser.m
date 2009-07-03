@@ -70,17 +70,13 @@ NSMutableArray *tags;
 		newTaskSeries.source = [attributeDict objectForKey:@"source"];
 		newTaskSeries.url = [attributeDict objectForKey:@"url"];
 		
-		newTaskSeries.location = nil;//[attributeDict objectForKey:@""];
+		newTaskSeries.location = nil;
 		newTaskSeries.notes = nil;
 		newTaskSeries.participants = nil;
-		newTaskSeries.tags = nil;
 		newTaskSeries.taskList = taskList;
 		newTaskSeries.tasks = nil;
-//		NSLog(@"%@, (%@)", newTaskSeries.name, newTaskSeries.created);
 	} else if ([elementName isEqualToString:@"tag"]) {
 		status = inTag;
-//	} else if ([elementName isEqualToString:@"participants"]) {
-//		// should i support?
 	} else if ([elementName isEqualToString:@"note"]) {
 		status = inNote;
 	} else if ([elementName isEqualToString:@"task"]) {
@@ -118,16 +114,26 @@ NSMutableArray *tags;
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
+	if ([string isEqualToString:@""]) {
+		return;
+	}
+	
 	switch(status) {
 		case inTag:{
+			Tag *newTag;
 			if (![tags containsObject:string]) {
-				Tag *newTag = [NSEntityDescription
+				newTag = [NSEntityDescription
 							  insertNewObjectForEntityForName:@"Tag"
 							  inManagedObjectContext:managedObjectContext];
 				newTag.name = string;
 				[tags addObject:string];
+			} else {
+				NSFetchRequest *req = [[NSFetchRequest alloc] init];
+				[req setEntity:[NSEntityDescription entityForName:@"Tag" inManagedObjectContext:managedObjectContext]];
+				[req setPredicate:[NSPredicate predicateWithFormat:@"name == %@", string]];
+				newTag = [[managedObjectContext executeFetchRequest:req error:nil] objectAtIndex:0];
 			}
-			// add tag to taskseries
+			newTag.taskSeries = newTaskSeries;
 			break;
 		}
 		case inNote:{

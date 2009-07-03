@@ -17,6 +17,8 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	listViewController.managedObjectContext = self.managedObjectContext;
 	[listViewController applicationDidFinishLaunching:application];
+	tagViewController.managedObjectContext = self.managedObjectContext;
+	[tagViewController applicationDidFinishLaunching:application];
 	
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];
@@ -115,7 +117,7 @@
 	
 	
 		// delete CoreData storefile (for test)
-		[fileManager removeItemAtPath:storePath error:nil];
+		//[fileManager removeItemAtPath:storePath error:nil];
 	
 	
 	// If the expected store doesn't exist, copy the default store.

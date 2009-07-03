@@ -197,6 +197,10 @@ static RtmController *rtmController;
 		}
 	}
 	NSLog(@"Complete: update all tasks");
+	
+	[[NSNotificationCenter defaultCenter]
+	 postNotification:[NSNotification
+					   notificationWithName:@"DidTagListUpdated" object:nil]];
 }
 
 -(void) updateAllListsAndTasks
