@@ -12,12 +12,28 @@
 @implementation RtmTaskParser
 
 @synthesize managedObjectContext, taskList, task;
+
 TaskSeries *newTaskSeries;
 Task *newTask;
+enum Status {
+	none,
+	inTag,
+	inNote
+} status;
+NSMutableArray *tags;
 
 - (void)parserDidStartDocument:(NSXMLParser *)parser
 {
+	status = none;
 	
+	tags = [[NSMutableArray alloc] init];
+	NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	[req setEntity:[NSEntityDescription entityForName:@"Tag" inManagedObjectContext:managedObjectContext]];
+	for (Tag *tag in [managedObjectContext executeFetchRequest:req error:nil])
+	{
+		[tags addObject:tag.name];
+	}
+	[tags sortUsingSelector:@selector(compare:)];
 }
 
 - (void)parseXMLFileAtURL:(NSURL *)URL parseError:(NSError **)error
@@ -61,16 +77,12 @@ Task *newTask;
 		newTaskSeries.taskList = taskList;
 		newTaskSeries.tasks = nil;
 //		NSLog(@"%@, (%@)", newTaskSeries.name, newTaskSeries.created);
-	} else if ([elementName isEqualToString:@"tags"]) {
-		// nothing to do?
 	} else if ([elementName isEqualToString:@"tag"]) {
-		// if new tag, then store it. after that, bind tag with taskseries
-	} else if ([elementName isEqualToString:@"participants"]) {
-		// should i support?
-	} else if ([elementName isEqualToString:@"notes"]) {
-		// nothing to do?
+		status = inTag;
+//	} else if ([elementName isEqualToString:@"participants"]) {
+//		// should i support?
 	} else if ([elementName isEqualToString:@"note"]) {
-		// store note content
+		status = inNote;
 	} else if ([elementName isEqualToString:@"task"]) {
 		newTask = [NSEntityDescription
 						 insertNewObjectForEntityForName:@"Task"
@@ -89,7 +101,7 @@ Task *newTask;
 		newTask.taskId = [attributeDict objectForKey:@"id"];
 		newTask.taskseries = newTaskSeries;
 	} else {
-		NSLog(@"NAME: %@", elementName);
+//		NSLog(@"NAME: %@", elementName);
 	}
 }
 
@@ -97,10 +109,41 @@ Task *newTask;
   namespaceURI:(NSString *)namespaceUR
  qualifiedName:(NSString *)qName
 {
+	if ([elementName isEqualToString:@"tag"]) {
+		status = none;
+	} else if ([elementName isEqualToString:@"note"]) {
+		status = none;
+	}
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
+	switch(status) {
+		case inTag:
+			if (![tags containsObject:string]) {
+				Tag *newTag = [NSEntityDescription
+							  insertNewObjectForEntityForName:@"Tag"
+							  inManagedObjectContext:managedObjectContext];
+				newTag.name = string;
+				[tags addObject:string];
+			}
+			// add tag to taskseries
+			break;
+		case inNote:
+			Note *newNote = [NSEntityDescription
+							 insertNewObjectForEntityForName:@"Note"
+							 inManagedObjectContext:managedObjectContext];
+			newNote.body = string;
+			// add note to taskseries
+			break;
+		default:
+			break;
+	}
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser
+{
+	// update db
 }
 
 @end

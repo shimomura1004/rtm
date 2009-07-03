@@ -11,6 +11,7 @@
 #import "TaskSeries.h"
 #import "TaskList.h"
 #import "Task.h"
+#import "Tag.h"
 
 @interface RtmTaskParser : NSObject {
 	NSManagedObjectContext *managedObjectContext;
@@ -32,5 +33,6 @@
   namespaceURI:(NSString *)namespaceUR
  qualifiedName:(NSString *)qName;
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string;
+- (void)parserDidEndDocument:(NSXMLParser *)parser;
 
 @end
