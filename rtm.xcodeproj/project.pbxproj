@@ -14,6 +14,7 @@
 		28216C970DB411BC00E5133A /* OverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* OverViewController.m */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		CA1B4F7110009A1A00E0A2A9 /* sabo.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1B4F7010009A1A00E0A2A9 /* sabo.png */; };
 		CA3084F30FFDE84900A1A347 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084E60FFDE84900A1A347 /* Participant.m */; };
 		CA3084F40FFDE84900A1A347 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084E80FFDE84900A1A347 /* Location.m */; };
 		CA3084F50FFDE84900A1A347 /* TaskSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3084EA0FFDE84900A1A347 /* TaskSeries.m */; };
@@ -55,6 +56,7 @@
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* rtm-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rtm-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CA1B4F7010009A1A00E0A2A9 /* sabo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sabo.png; sourceTree = "<group>"; };
 		CA3084E50FFDE84900A1A347 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
 		CA3084E60FFDE84900A1A347 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
 		CA3084E70FFDE84900A1A347 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 		CAD738440FEB373000DE44E5 /* RTM.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = RTM.xcdatamodel; sourceTree = "<group>"; };
 		CAD738530FEB37AE00DE44E5 /* AuthParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthParser.m; sourceTree = "<group>"; };
 		CAD738550FEB37B500DE44E5 /* AuthParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthParser.h; sourceTree = "<group>"; };
-		CAD766780FEC846900FA0909 /* sabo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sabo.jpeg; sourceTree = "<group>"; };
 		CAD851AC0FF279050064E5F6 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchView.xib; path = ../SearchView.xib; sourceTree = "<group>"; };
 		CAD851BC0FF27A720064E5F6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		CAD851BD0FF27A720064E5F6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -243,7 +244,7 @@
 		CAD766760FEC844C00FA0909 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CAD766780FEC846900FA0909 /* sabo.jpeg */,
+				CA1B4F7010009A1A00E0A2A9 /* sabo.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -341,6 +342,7 @@
 				CAD4868A0FF3AF2C00ACAE06 /* ListView.xib in Resources */,
 				CAD486C40FF3B41000ACAE06 /* ListDetailView.xib in Resources */,
 				CADA288D0FF4A9E500C1BE6F /* TaskAddView.xib in Resources */,
+				CA1B4F7110009A1A00E0A2A9 /* sabo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
