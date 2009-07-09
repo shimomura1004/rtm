@@ -62,7 +62,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	ListDetailViewController *listDetailViewController =
 		[[ListDetailViewController alloc] initWithNibName:@"ListDetailView" bundle:nil];
-	[listDetailViewController setTitle:[listArray objectAtIndex:indexPath.row]];
+	listDetailViewController.managedObjectContext = managedObjectContext;
+	
+	[listDetailViewController setListName:[listArray objectAtIndex:indexPath.row]];
+	[listDetailViewController updateTaskSeriesArray];
 	[self.navigationController pushViewController:listDetailViewController animated:YES];
 	[listDetailViewController release];
 }

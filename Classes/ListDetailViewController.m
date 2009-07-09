@@ -11,12 +11,56 @@
 
 @implementation ListDetailViewController
 
-@synthesize navigationBar;
+@synthesize navigationBar, myTableView, taskSeriesArray, managedObjectContext, listName;
+
+
+/** This method is called when TaskList in CoreData is updated */
+-(void)updateTaskSeriesArray
+{
+	if ( !taskSeriesArray )	taskSeriesArray = [[NSMutableArray alloc] init];
+	
+	[self setTitle:listName];
+	[taskSeriesArray removeAllObjects];
+	
+	NSManagedObjectContext *context = [self managedObjectContext];
+	NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	[req setEntity:[NSEntityDescription entityForName:@"TaskSeries" inManagedObjectContext:context]];
+	[req setPredicate:[NSPredicate
+					   predicateWithFormat:@"taskList.name == %@ and some tasks.completed == null",
+					   listName]];
+	
+	for (TaskSeries *taskSeries in [context executeFetchRequest:req error:nil])
+	{
+		[taskSeriesArray addObject:[NSString stringWithString:[taskSeries name]]];
+	}
+	[taskSeriesArray sortUsingSelector:@selector(compare:)];
+	[myTableView reloadData];
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 0;
+	return taskSeriesArray.count;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cellDefault = [tableView dequeueReusableCellWithIdentifier:@"cellDefault"];
+	if (cellDefault == nil) {
+		//		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+		cellDefault = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+											  reuseIdentifier:@"cellDefault"] autorelease];
+	}
+	
+	cellDefault.textLabel.text = [taskSeriesArray objectAtIndex:indexPath.row];
+	//	cellDefault.detailTextLabel.text = @"tags here!";
+	cellDefault.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	return cellDefault;
+}
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//}
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

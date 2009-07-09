@@ -7,12 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreData/CoreData.h>
+#import "TaskSeries.h"
 
 @interface ListDetailViewController : UIViewController {
 	IBOutlet UINavigationBar *navigationBar;
+	IBOutlet UITableView *myTableView;
+	
+	NSMutableArray *taskSeriesArray;
+	NSManagedObjectContext *managedObjectContext;
+	NSMutableString *listName;
 }
 
 @property (retain, nonatomic, readonly) UINavigationBar *navigationBar;
+@property (retain, nonatomic) UITableView *myTableView;
+@property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (retain, nonatomic, readonly) NSArray *taskSeriesArray;
+@property (retain, nonatomic) NSMutableString *listName;
+
+-(void)updateTaskSeriesArray;
 
 @end
